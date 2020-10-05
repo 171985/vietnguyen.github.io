@@ -3,122 +3,230 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Thực hành Position</title>
     <link rel="stylesheet" href="stype.css">
 </head>
 <body>
-<div class="row main-post media-table">
-    <div class="col-lg-9 post">
-        <div itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject">
-            <meta itemprop="url" content="https://techmaster.vn/media/static/36/bq11sfc51co185k1icg0">
-            <meta itemprop="width" content="800">
-            <meta itemprop="height" content="800">
+    <div class="banners">
+        <div class="banners1">
+            <div><a href="#" class="menu-banners">Kênh người bán</a></div>
+            <div><a href="#" class="menu-banners">Tải ứng dụng</a></div>
+            <div>
+                <a href="#" class="menu-banners">Kết nối</a></div>
+                <a href="#" title="facebook"><img src="data:image/png;base64,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" alt="" class="img1" /></a>
+                <a href="#" title="intagram"><img src="" alt=""></a>
         </div>
-        <h1 class="margin-bottom-15">Tuyển nhân viên quản lý lớp học, tư vấn khoá học</h1>
-        <div class="margin-bottom-15">
-            21 tháng 05, 2020
+        <div class="banners2" style="margin-left: 600px;">
+            <div><a href="#" class="menu-banners">Thông báo</a></div>
+            <div><a href="#" class="menu-banners">Trợ giúp</a></div>
+            <div>
+                <a href="#" class="menu-banners">Đăng ký</a></div>
+                <a href="#" class="menu-banners">Đăng nhập</a>
+        </div>
+    </div>
+    <div class="menu-sp">
+        <div>
+            <h1>Flash Sale</h1>
+        </div>
+        <div class="spcol1">
+            <div class="sp1">
+                <div class="sale">
+                    <div class="s1"><a href="#"><b>29%</b></a></div>
+                    <p class="s2"><a href="#"><b>Giam</b></a></p>        
+                </div>
+                <div class="datesale">
+                    <div class="ds1"><a href="#"><b>10.10</b></a></div>
+                    <div class="ds2">
+                        <div class="ds21"><a href="#"><b>Flash sale</b></a></div>
+                    </div>
+                </div>
+                <div class="imagesale">
+                    <a href="#"><img src="https://vn-test-11.slatic.net/p/b7271bef857221d95191a6cc17d07907.jpg_400x400Q100.jpg_.webp" alt=""></a> 
+                </div>
+                <div>
+                    <a href="#">&#8363; 201.000</a>
+                </div>
+            </div>
+            <div class="sp2">
+                <div class="sale">
+                    <div class="s1"><a href="#"><b>35%</b></a></div>
+                    <p class="s2"><a href="#"><b>Giam</b></a></p>        
+                </div>
+                <div class="datesale">
+                    <div class="ds1"><a href="#"><b>10.10</b></a></div>
+                    <div class="ds2">
+                        <div class="ds21"><a href="#"><b>Flash sale</b></a></div>
+                    </div>
+                </div>
+                <div class="imagesale">
+                    <a href="#"><img src="https://vn-test-11.slatic.net/p/b7271bef857221d95191a6cc17d07907.jpg_400x400Q100.jpg_.webp" alt=""></a> 
+                </div>
+                <div>
+                    <a href="#">&#8363; 208.000</a>
+                </div>
+            </div>
+            <div class="sp3">
+                <div class="sale">
+                    <div class="s1"><a href="#"><b>45%</b></a></div>
+                    <p class="s2"><a href="#"><b>Giam</b></a></p>        
+                </div>
+                <div class="datesale">
+                    <div class="ds1"><a href="#"><b>10.10</b></a></div>
+                    <div class="ds2">
+                        <div class="ds21"><a href="#"><b>Flash sale</b></a></div>
+                    </div>
+                </div>
+                <div class="imagesale">
+                    <a href="#"><img src="https://vn-test-11.slatic.net/p/b7271bef857221d95191a6cc17d07907.jpg_400x400Q100.jpg_.webp" alt=""></a> 
+                </div>
+                <div>
+                    <a href="#">&#8363; 180.000</a>
+                </div>
+            </div>
+            <div class="sp4">
+                <div class="sale">
+                    <div class="s1"><a href="#"><b>29%</b></a></div>
+                    <p class="s2"><a href="#"><b>Giam</b></a></p>        
+                </div>
+                <div class="datesale">
+                    <div class="ds1"><a href="#"><b>10.10</b></a></div>
+                    <div class="ds2">
+                        <div class="ds21"><a href="#"><b>Flash sale</b></a></div>
+                    </div>
+                </div>
+                <div class="imagesale">
+                    <a href="#"><img src="https://vn-test-11.slatic.net/p/b7271bef857221d95191a6cc17d07907.jpg_400x400Q100.jpg_.webp" alt=""></a> 
+                </div>
+                <div>
+                    <a href="#">&#8363; 201.000</a>
+                </div>
+            </div>
+            <div class="sp5">
+                <div class="sale">
+                    <div class="s1"><a href="#"><b>29%</b></a></div>
+                    <p class="s2"><a href="#"><b>Giam</b></a></p>        
+                </div>
+                <div class="datesale">
+                    <div class="ds1"><a href="#"><b>10.10</b></a></div>
+                    <div class="ds2">
+                        <div class="ds21"><a href="#"><b>Flash sale</b></a></div>
+                    </div>
+                </div>
+                <div class="imagesale">
+                    <a href="#"><img src="https://vn-test-11.slatic.net/p/b7271bef857221d95191a6cc17d07907.jpg_400x400Q100.jpg_.webp" alt=""></a> 
+                </div>
+                <div>
+                    <a href="#">&#8363; 201.000</a>
+                </div>
+            </div>
+        </div>
+        <div class="spcol2">
+            <div class="sp6">
+                <div class="sale">
+                    <div class="s1"><a href="#"><b>29%</b></a></div>
+                    <p class="s2"><a href="#"><b>Giam</b></a></p>        
+                </div>
+                <div class="datesale">
+                    <div class="ds1"><a href="#"><b>10.10</b></a></div>
+                    <div class="ds2">
+                        <div class="ds21"><a href="#"><b>Flash sale</b></a></div>
+                    </div>
+                </div>
+                <div class="imagesale">
+                    <a href="#"><img src="https://vn-test-11.slatic.net/p/b7271bef857221d95191a6cc17d07907.jpg_400x400Q100.jpg_.webp" alt=""></a> 
+                </div>
+                <div>
+                    <a href="#">&#8363; 201.000</a>
+                </div>
+            </div>
+            <div class="sp7">
+                <div class="sale">
+                    <div class="s1"><a href="#"><b>35%</b></a></div>
+                    <p class="s2"><a href="#"><b>Giam</b></a></p>        
+                </div>
+                <div class="datesale">
+                    <div class="ds1"><a href="#"><b>10.10</b></a></div>
+                    <div class="ds2">
+                        <div class="ds21"><a href="#"><b>Flash sale</b></a></div>
+                    </div>
+                </div>
+                <div class="imagesale">
+                    <a href="#"><img src="https://vn-test-11.slatic.net/p/b7271bef857221d95191a6cc17d07907.jpg_400x400Q100.jpg_.webp" alt=""></a> 
+                </div>
+                <div>
+                    <a href="#">&#8363; 208.000</a>
+                </div>
+            </div>
+            <div class="sp8">
+                <div class="sale">
+                    <div class="s1"><a href="#"><b>45%</b></a></div>
+                    <p class="s2"><a href="#"><b>Giam</b></a></p>        
+                </div>
+                <div class="datesale">
+                    <div class="ds1"><a href="#"><b>10.10</b></a></div>
+                    <div class="ds2">
+                        <div class="ds21"><a href="#"><b>Flash sale</b></a></div>
+                    </div>
+                </div>
+                <div class="imagesale">
+                    <a href="#"><img src="https://vn-test-11.slatic.net/p/b7271bef857221d95191a6cc17d07907.jpg_400x400Q100.jpg_.webp" alt=""></a> 
+                </div>
+                <div>
+                    <a href="#">&#8363; 180.000</a>
+                </div>
+            </div>
+            <div class="sp9">
+                <div class="sale">
+                    <div class="s1"><a href="#"><b>29%</b></a></div>
+                    <p class="s2"><a href="#"><b>Giam</b></a></p>        
+                </div>
+                <div class="datesale">
+                    <div class="ds1"><a href="#"><b>10.10</b></a></div>
+                    <div class="ds2">
+                        <div class="ds21"><a href="#"><b>Flash sale</b></a></div>
+                    </div>
+                </div>
+                <div class="imagesale">
+                    <a href="#"><img src="https://vn-test-11.slatic.net/p/b7271bef857221d95191a6cc17d07907.jpg_400x400Q100.jpg_.webp" alt=""></a> 
+                </div>
+                <div>
+                    <a href="#">&#8363; 201.000</a>
+                </div>
+            </div>
+            <div class="sp10">
+                <div class="sale">
+                    <div class="s1"><a href="#"><b>29%</b></a></div>
+                    <p class="s2"><a href="#"><b>Giam</b></a></p>        
+                </div>
+                <div class="datesale">
+                    <div class="ds1"><a href="#"><b>10.10</b></a></div>
+                    <div class="ds2">
+                        <div class="ds21"><a href="#"><b>Flash sale</b></a></div>
+                    </div>
+                </div>
+                <div class="imagesale">
+                    <a href="#"><img src="https://vn-test-11.slatic.net/p/b7271bef857221d95191a6cc17d07907.jpg_400x400Q100.jpg_.webp" alt=""></a> 
+                </div>
+                <div>
+                    <a href="#">&#8363; 201.000</a>
+                </div>
+            </div>
         </div>
         
-        <div class="categories margin-bottom-15">
-            
-            <a href="/posts?keyword=&category=85" style="text-decoration: none">
-                <span class="badge category">TechMaster</span>
-            </a>
-            
+    </div>
+    <div class="footer">
+        <div class="qd">
+            <div class="CS"><a href="#">CHÍNH SÁCH BẢO MẬT</a></div>
+            <div class="CS"><a href="#">QUY CHẾ HOẠT ĐỘNG</a></div>
+            <div class="CS"><a href="#">CHÍNH SÁCH VẬN CHUYỂN</a></div>
+            <div class="CS"><a href="#">CHÍNH SÁCH TRẢ HÀNG & HOÀN TIỀN</a></div>
         </div>
-        
-        <div class="techmaster-font-open-sans post-content">
-            <p>Techmaster tuyển 02 nhân viên quản lý lớp học, tư vấn khoá học làm việc tại văn phòng 48 Tố Hữu, Viwaseen Tower, Nam Tư Liêm, Hà nội</p>
-
-<h2>Yêu cầu</h2>
-
-<ol>
-<li>Nữ</li>
-<li>Chăm chỉ, bền bỉ, đúng giờ</li>
-<li>Sử dụng Word, Excel để tạo báo cáo</li>
-<li>Khả năng giao tiếp tốt</li>
-</ol>
-
-<h2>Những kỹ năng được đào tạo&nbsp;bổ xung</h2>
-
-<ol>
-<li>Quản lý lớp học - sinh viên - giảng viên trên hệ thống trực tuyến của Techmaster.</li>
-<li>Xử lý thắc mắc, phản hồi của khách hàng</li>
-</ol>
-
-<h2>Công việc</h2>
-
-<ol>
-<li>Tư vấn tuyển sinh qua kênh Facebook và StringeeX</li>
-<li>Gọi điện tư vấn hoặc email hỗ trợ sinh viên quan tâm đến khoá học.</li>
-<li>Quản lý các lớp học đang diễn ra, kiểm tra quy trình quản lý chất lượng lớp học: điểm danh, báo cáo đồ án, giờ giấc, lấy ý kiến sinh viên</li>
-<li>Tư vấn, xử lý thắc mắc của sinh viên</li>
-<li>Lập và điều chỉnh kế hoạch&nbsp;khai giảng 2 tháng một lần.</li>
-<li>Kiểm soát quy trình cấp chứng chỉ - giảng viên, hội đồng chấm thi và sinh viên.</li>
-</ol>
-
-<h2>Môi trường làm việc</h2>
-
-<ol>
-<li>Thử việc và đào tạo kỹ năng mới&nbsp;3 tháng</li>
-<li>Làm việc tại tầng 12A, Viwaseen Tower, 48 Tố Hữu, Nam Từ Liêm. Ưu tiên ứng viên nhà gần văn phòng.</li>
-<li>Thứ 2 đến thứ 7. Sáng 9:30 đến 6:30 tối. Nghỉ trưa 12:00 đến 2:00 chiều.</li>
-<li>Được cấp máy tính và đầy đủ trang thiết bị cần thiết</li>
-<li>Chỗ ngồi rộng rãi, văn phòng hiện đại thoáng mát, nhiều cây xanh, view đẹp</li>
-<li>Đồng nghiệp độ tuổi 24-29</li>
-</ol>
-
-<h2>Lương</h2>
-
-<ol>
-<li>Lương cứng + thưởng trực tiếp theo số lượng khoá học mới mở.</li>
-<li>Thưởng thâm niên làm việc (annual royalty)</li>
-</ol>
-
-<h2>Về Techmaster</h2>
-
-<ol>
-<li>Thành lập 7/2011</li>
-<li>Chuyên đào tạo kỹ năng lập trình Web, Di Động, FullStack, DevOps cho mọi đối tượng</li>
-<li>Có 2 cơ sở đào tạo: 14 ngõ 4 Nguyễn Đình Chiểu, Hai Bà Trưng và 12A, 48 Tố Hữu, Viwaseen Tower, Nam Từ Liêm</li>
-<li>Cam kết việc làm cho sinh viên học khoá học dài hạn</li>
-</ol>
-
-<h2>Quy trình phỏng vấn</h2>
-            <h2> Quy trình phỏng vấn 1</h2>
-        
-<ol>
-<li>Nộp CV dạng PDF, Word đến cuong@techmaster.vn / 0902209011</li>
-<li>Làm bài test kiểm tra kỹ năng viết trong 60 phút</li>
-<li>Thăm quan văn phòng - phỏng vấn lần 2</li>
-</ol>
-
-<figure class="image"><img alt="" height="399" src="https://techmaster.vn/media/static/36/bq11sfc51co185k1icg0" width="600" />
-<figcaption>Công việc tư vấn viên là giải thích rõ các khoá học và quản lý các lớp học đang diễn ra</figcaption>
-</figure>
-
-<figure class="image"><img alt="" height="600" src="https://techmaster.vn/media/static/36/bqp4bes51co0sqthsff0" width="800" />
-<figcaption>Môi trường đào tạo hiện đại, chuyên nghiệp</figcaption>
-</figure>
-
-<figure class="image"><img alt="" height="960" src="https://techmaster.vn/media/static/36/br361es51co8228nk5qg" width="1280" />
-<figcaption>Đào tạo nhân viên cho nhiều công ty , tập đoàn</figcaption>
-</figure>
-
-<p>&nbsp;</p>
-
-<figure class="image"><img alt="" height="620" src="https://techmaster.vn/media/static/36/br35tvk51co8228nk5p0" width="1130" />
-<figcaption>Năm nào Techmaster cũng tổ chức đi tham quan, dã ngoại 2-3 lần</figcaption>
-</figure>
-
-<p>&nbsp;</p>
-
-<figure class="image"><img alt="" height="732" src="https://techmaster.vn/media/static/36/br35ur451co8228nk5pg" width="1246" />
-<figcaption>Ảnh chụp tại một căn nhà nằm sâu trong vùng núi Tam Đảo</figcaption>
-</figure>
-
-<figure class="image"><img alt="" height="696" src="https://techmaster.vn/media/static/36/br360ac51co8228nk5q0" width="1213" />
-<figcaption>Bơm SUP và Kayak chuẩn bị chèo nào</figcaption>
-</figure>
+        <div style="text-align: center; color: rgb(112, 112, 112); font-size: 13px;">Cty TNHH Shopee</div>
+        <div style="padding-top: 20px; text-align: center;">
+            <p>Địa chỉ: Tầng 28, Tòa nhà trung tâm Lotte Hà Nội, 54 Liễu Giai, phường Cống Vị, Quận Ba Đình, Hà Nội. Tổng đài hỗ trợ: 19001221 - Email: cskh@hotro.shopee.vn</p>
+            <p>Mã số doanh nghiệp: 0106773786 do Sở Kế hoạch & Đầu tư TP Hà Nội cấp lần đầu ngày 10/02/2015</p>
+            <p>&#169; 2015 - Bản quyền thuộc về Công ty TNHH Shopee</p>
+        </div>
+    </div>
 </body>
 </html>
