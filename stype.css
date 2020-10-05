@@ -1,0 +1,11 @@
+.navbar {
+    border: none!important;
+    padding-top: 0;
+    padding-bottom: 0;
+    justify-content: space-between!important
+}
+
+.logo-brand img {
+    width: 120px
+}
+
