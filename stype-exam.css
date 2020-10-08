@@ -1,0 +1,136 @@
+.header{
+    height: 40px;
+    width: 100%;
+    background-color: rgb(243, 243, 243);
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.header a{
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.header a:hover{
+    color: blue;
+}
+
+h1 {
+    color: red;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+}
+.images{
+    transition: all;
+}
+.images:hover{
+    transform: scale(1.5);
+}
+
+.sp-dem, .menu-ga {
+    margin-left: 40px;
+    margin-top: 80px;
+}
+.spcol1, .spcol2{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+.spcol2{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.sp1, .sp2, .sp3, .sp4, .sp5, .sp6{
+    width: 175px;
+    height: 200px;
+    padding-left: 10px;
+}
+.sale {
+    background-color: #FDD638;
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    z-index: 9;
+    margin-left: 140px;
+    text-align: center;
+}
+.s1 a{
+    color: red;
+    font-size: 18px;
+    height: 20px;
+}
+.s2{
+    margin-top: 0px;
+}
+.s2 a{ 
+    color: white;
+    font-size: 18px;
+    height: 20px;
+    margin-top: 0px;
+}
+.imagesale img{
+    position: relative;
+    width: 175px;
+    height: 175px;
+}
+.datesale{
+    width: 150px;
+    position: absolute;
+    z-index: 3;
+    padding-bottom: 5px;
+    float: inline-end;
+    margin-top: 150px;
+    display: flex;
+}
+.ds1 a{
+    background-color: rgb(208, 1, 27);
+    width: 40px;
+    color: white;
+}
+.ds21{
+    margin-bottom: 0px;
+    width: 100px;
+    background-color: rgb(17, 51, 102);
+    border-bottom-right-radius:10px;
+}
+.ds21 a{
+    background-color:rgb(17, 51, 102);
+    width: 100px;
+    color: white;
+}
+a{
+    text-decoration: none;
+}
+.detail{
+    font-weight: bold;
+    font-size: 16px;
+}
+.gia a{
+    color: coral;
+    font-weight: lighter;
+}
+
+.footer{
+    background-color: rgb(245, 245, 245);
+    padding-top: 100px;
+}
+.qd{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 40px;
+    padding-top: 10px;
+    font-size: 13px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.qd a{
+    color:rgb(112, 112, 112);
+    font-size: 13px;
+}
+p{
+    font-size: 13px;
+    color: rgb(112, 112, 112);
+}
