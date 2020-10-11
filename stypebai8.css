@@ -1,0 +1,251 @@
+#fb{
+    margin: 0;
+    outline: none;
+    padding: 0;
+    width: auto;
+}
+
+.fb-content{
+    min-height: 640px;
+    padding-bottom: 20px;
+    display: flex;
+    background-color: rgb(240, 242, 245);
+}
+
+.facebook{
+    margin: -28px;
+    margin-left: -10px;
+}
+
+h2{
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 28px;
+    font-weight: normal;
+    line-height: 32px;
+    width: 500px;
+}
+
+.div1{
+    height:100%;
+    background-color: rgb(240, 242, 245);
+    box-sizing: border-box;
+    margin-right: 0;
+    padding-right: 32px;
+    width: 580px;
+    margin-left: 120px;
+}
+
+.logo-fb{
+    height: 108px;
+    margin: -20px;
+}
+
+.facebook{
+    padding: 112px 0 16px;
+    margin-top: 50px;
+}
+.div2{
+    width: 396px;
+    height: 456px;
+    background-color: rgb(240, 242, 245);
+    margin-top: 100px;
+    margin-right: 100px;
+    justify-content: center;
+}
+.formlogin{
+    /*padding-left: 10px;*/
+    padding-top: 20px;
+    justify-content: center;
+    height: 100%;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.input-text{
+    font-size: 17px;
+    width: 364px;
+    margin: auto;
+    padding: 6px 0;
+    text-align: center;
+}
+#name, #password{
+    width: 330px;
+    /*margin-bottom: 10px;*/
+    border-radius: 6px;
+    padding: 14px 16px;
+    font-size: 17px;
+    border: 1px solid #dddfe2;
+}
+.submit-login{
+    padding-top: 6px;
+    text-align: center;
+}
+.login{
+    width: 330px;
+    background-color: rgb(24, 119, 242);
+    border-radius: 6px;
+    border: none;
+    line-height: 48px;
+    font-weight: 700;
+    font-size: 20px;
+    padding: 0 16px;
+}
+
+.login a{
+    color: white;
+}
+.login:hover{
+    background-color: rgb(22, 111, 229);
+}
+
+.forgetpass{
+    direction: ltr;
+    color: rgb(24, 119, 242);
+    margin-top: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+    line-height: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.forgetpass:hover{
+    text-decoration: underline;
+}
+
+.line{
+    width: 432px;
+    align-items: center;
+    border-bottom: 1px solid #dadde1;
+    display: flex;
+    margin: 20px 16px;
+    text-align: center;
+}
+
+.submit-member{
+    padding-top: 6px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 396px;
+    height: 48px;
+    line-height: 16px;
+}
+
+.regis{
+    height: 48px;
+    width: 146px;
+    background-color:rgb(66, 183, 42);
+    color: white;
+    border-radius: 6px;
+    font-weight: 700;
+    padding: 14px 16px;
+}
+
+.regis:hover{
+    background-color: rgb(54, 164, 32);
+}
+.textsetup{
+    margin-top: 30px;
+}
+.pagesetup{
+    font-size: 14px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(28, 30, 33);
+    text-align: center;
+    margin-top: 30px;
+}
+a{
+    text-decoration: none;
+}
+
+.footer{
+    width: 980px;
+    margin: 0 auto;
+    color: rgb(115, 115, 115);
+}
+.list-country{
+    padding-top: 20px;
+    line-height: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: rgb(28, 30, 33);
+    white-space: nowrap;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.list-country a{
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-block-start: 16px;
+    margin-block-end: 16px;
+    margin-inline-start: 40px;
+    padding-top: 8px;
+    justify-content: space-between;
+}
+.country{
+    color: rgb(138, 141, 145);
+}
+li .a{
+    background-color: rgb(235, 237, 240);
+    height: 20px;
+    width: 34px;
+}
+.imgs{
+    width: 12px;
+    height: 12px;
+}
+.line2{
+    border-bottom: 1px solid #dddfe2;
+    font-size: 1px;
+    height: 8px;
+    margin-bottom: 8px;
+}
+
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-block-start: 16px;
+    margin-block-end: 16px;
+    margin-inline-start: 40px;
+    padding-top: 0px;
+    justify-content: space-between;    
+}
+
+.Linklist{
+        padding-top: 0px;
+        line-height: 19px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        color: rgb(135, 142, 145);
+        white-space: nowrap;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding-left: 0px;
+
+}
+
+.Linklist li a{
+    margin-right: 0px;
+    color: rgb(138, 141, 145);
+}
+
+li{
+    padding-right: 0px;
+    padding-left: 20px;
+}
+
+.fbdesign{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 11px;
+}
