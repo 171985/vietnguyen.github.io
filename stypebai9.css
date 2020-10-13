@@ -1,0 +1,86 @@
+body{
+    padding-left: 10px;
+}
+table, td, th{
+    border: 1px solid grey;
+    border-collapse: collapse;
+    text-align: center;
+    font-weight: bold;
+}
+caption{
+    caption-side: top;
+}
+p{
+    font-weight: bold;
+    background-color: rgb(255, 241, 197);
+    width: 600px;
+    text-align: center;
+    margin-bottom: 2px;
+    font-size: 14px;
+    height: 20px;
+}
+
+i{
+    color: rgb(235, 33, 46);
+}
+
+table{
+    width: 600px;
+}
+
+.giai{
+    font-size: 12px;
+    width: 60px;
+}
+.giai31{
+    background-color: rgb(176, 211, 236);
+    font-size: 16px;
+}
+.maunen{
+    background-color: rgb(243, 243, 243);
+}
+.td0{
+    color: red;
+}
+
+.db{
+    font-size: 18px;
+    color: rgb(235, 33, 46);
+}
+
+.giaibay{
+    color: rgb(235, 33, 46);
+    font-size: 18px;
+}
+.td1{
+    color: red;
+    font-size: 12px;
+    height: 20px;
+}
+
+.nenmau{
+    color: black;
+    background-color: rgb(176, 211, 236);
+}
+
+.mauchu{
+    color: red;
+    width: 80px;
+}
+
+.table1{
+    font-size: 12px;
+    max-width: 400px;
+    font-weight: bolder;
+}
+
+.tablegoc{
+    display: flex;
+    margin-top: 40px;
+}
+.duoi{
+    width: 300px;
+}
+.table1 td{
+    height: 18px;
+}
