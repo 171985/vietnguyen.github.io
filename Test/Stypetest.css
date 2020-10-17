@@ -1,0 +1,420 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+
+body{
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    width: 100%;
+}
+.main{
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+/* .header-main{
+    position: fixed;
+} */
+.header{
+    /* position: fixed;
+    top: 50px; */
+    margin-top: 10px;
+    display: inline-flex;
+    /* position: relative; */
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.logo{
+    position: absolute;
+    left: 0px;
+    /* width: 120px; */
+}
+.form-login{
+    position: absolute;
+    right:0px ;
+    display: flex;
+}
+/* 
+.login{
+    position: absolute;
+    right: 200px;
+} */
+.logo img{
+    /* float: left; */
+    width: 120px;
+    height: 40px;
+    /* padding-left: 10px; */
+    padding-right: 50px;
+    /* border-radius: 20px; */
+}
+
+input, button{
+    height: 36px;
+    min-width: 100px;
+    /* margin-top: 20px; */
+    /* margin-left: 10px; */
+    padding-left: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(207, 212, 223);
+}
+
+button{
+    background: seagreen;
+    text-align: center;
+    font-weight: bolder;
+}
+
+button:hover{
+    background: greenyellow;
+    color: red;
+}
+
+/* .space{
+    width: 550px;
+} */
+.dangky{
+    position: absolute;
+    text-align: center;
+    /* margin-top: 10px;*/
+    /* padding-top: 10px;
+    right: 0px; */
+    /* color: red; */
+}
+
+.header div a{
+    text-decoration: none;
+    color: green;
+}
+
+.header div a:hover{
+    background: rgb(00, 100, 00);
+    color: red;
+    text-decoration: underline;
+}
+.menu-bar{
+    /* padding-left: 10px; */
+    /* position: absolute; */
+    margin-top: 30px;
+    background: rgb(00, 100, 00);
+    text-align: center;
+    z-index: 5;
+    font-size: 16px;
+    justify-content: space-between;
+    /* margin: auto; */
+}
+
+.imgs-main{
+    display: flex;
+    z-index: 1;
+    margin-top: 10px;
+    width: 100%;
+    margin-left: 0px;
+}
+.imgs-main img{
+    width: 100%;
+    height: 400px;
+}
+
+.menu-bar ul{
+    display: flex;
+    /* display: inline-flex; */
+    /* display: block; */
+    list-style-type: none;
+    color: white;
+}
+
+.menu-bar ul li{
+    width: 140px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.menu-bar ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.active, .menu-bar ul li:hover{
+    background:#2bab0d;
+    border-radius: 3px;
+}
+
+.menu-bar .fa {
+    margin-right: 4px;
+}
+
+.fa-angle-right{
+    margin-left: 5px;
+}
+.sub-menu{
+    display: none;
+}
+
+.menu-bar ul li:hover .sub-menu{
+    display: block;
+    position: absolute;
+    background: rgb(00, 100, 00);
+    /* background-color: #2bab0d; */
+    margin-top: 5px;
+    /* margin-left: -10px; */
+}
+
+.menu-bar ul li:hover .sub-menu ul{
+    display: block;
+    /* background-color: #2bab0d; */
+    /* margin: 10px; */
+}
+
+.menu-bar ul li:hover .sub-menu ul li{
+    width: 140px;
+    padding: 10px;
+    border-bottom: 1px dotted white;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+
+.menu-bar ul li:hover .sub-menu ul li:last-child{
+    border-bottom: none;
+}
+
+.menu-bar ul li:hover .sub-menu ul li a:hover{
+    color: red;
+    /* background-color: lightpink;
+    display: block; */
+}
+/* .fa-angle-right{
+    float: right;
+}  */
+.sub-menu2{
+    display: none;
+}
+.hover-me:hover .sub-menu2{
+    position: absolute;
+    display: block;
+    margin-top: -40px;
+    margin-left: 100px;
+    background-color:rgb(00, 100, 00)
+}
+
+.hover-me:hover .sub-menu2 li:hover{
+    background-color:transparent;
+}
+
+
+/*san pham nổi bật*/
+
+.container{
+    width: 100%;
+}
+
+/* .list-sp{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid gray;
+} */
+.SP-main{
+    background-color: lightpink;
+    /* padding-left: 0px; */
+    padding-left: 20px;
+    margin-top: 30px;
+    margin-left: -30px;
+    height: 40px;
+    width: 100%;
+    border-radius: 20px;
+}
+.col-sp1{
+    display: flex;
+    /* width: 100%; */
+    margin-left: 40px;
+    padding-top: 20px;
+}
+.buy{
+    display: flex;
+    text-align: center;
+    margin-left: 80px;
+    /* margin-right: auto; */
+    /* margin-left: 200px; */
+}
+
+.sp {
+    width: 30%;
+    /* text-align: center; */
+    /* background-color: violet; */
+    border: 1px dotted greenyellow;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.sp img{
+    width: 180px;
+    height: 180px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.fa{
+    padding-right: 5px;
+}
+
+.sp div a{
+    text-align: center;
+    font-weight: bolder;
+    margin: 5px;
+}
+
+.sale{
+    width: 230px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    position: relative;
+}
+.cty{
+    color: red;
+    text-align: center;
+    font-weight: normal;
+    border: 1px solid red;
+    border-radius: 3px;
+    position: absolute;
+    z-index: 9;
+    top: 20px;
+    /* margin-top: 20px; */
+    /* margin-bottom: 40px; */
+}
+.tragop{
+    /* margin-top: 150px; */
+    color: white;
+    background: coral;
+    font-weight: normal;
+    border-radius: 3px;
+    position: absolute;
+    z-index: 1;
+    bottom: 5px;
+}
+.saleimg img{
+    position: relative;
+    transition: all;
+    object-fit: cover;
+    box-sizing: border-box;
+}
+
+.sp .saleimg img:hover{
+    transform: scale(1.1);
+    overflow: hidden;
+}
+
+.sp .saleimg img:hover a{
+    transform: scale(1.1);
+}
+.saleup{
+    margin-top: 150px;
+    color: white;
+    background-color: teal;
+    font-weight: normal;
+    border-radius: 4px;
+    position: absolute;
+    z-index: 3;
+    bottom: 5px;
+}
+.detail{
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.detail a{
+    margin-top: 10px;
+    color: black;
+}
+.price a{
+    color: red;
+}
+
+.line{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid rgb(207, 216, 225);
+}
+.footer-top{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    /* background-color:rgb(red, green, blue); */
+}
+.row1{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.row1 ul{
+    list-style-type: none;
+}
+.row1 ul li a{
+    text-decoration: none;
+}
+
+.level1{
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.callfree{
+    font-weight: bold;
+}
+.tomau{
+    color: #dd5500;
+}
+.communicate{
+    color: red;
+    font-weight: bold;
+}
+.footer-bottom{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* Tạo nút back to top */
+/* back to top */
+a.cd-top {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    /* image replacement properties */
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    background: #3097D1 url("https://thinhweb.com/wp-content/themes/thinhweb/images/cd-top-arrow.svg") no-repeat center 50%; */
+    /* visibility: hidden; */
+    opacity: 0;
+    -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+    -moz-transition: opacity .3s 0s, visibility 0s .3s;
+    transition: opacity .3s 0s, visibility 0s .3s;
+    }
+    a.cd-top.cd-is-visible, a.cd-top.cd-fade-out, .no-touch a.cd-top:hover {
+    -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+    -moz-transition: opacity .3s 0s, visibility 0s 0s;
+    transition: opacity .3s 0s, visibility 0s 0s;
+    }
+    a.cd-top, a.cd-top:visited, a.cd-top:hover {
+    color: #CCCCCC;
+    text-decoration: none;
+    }
+    a.cd-top.cd-is-visible {
+    /* the button becomes visible */
+    visibility: visible;
+    opacity: 1;
+    }
+    a.cd-top.cd-fade-out {
+    /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+    opacity: 1;
+    }
