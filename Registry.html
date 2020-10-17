@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký thành viên</title>
+    <link rel="icon" href="images/Logo.png" style="images/x-icon">
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: white;
+            font-size: 12px;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 16px;
+        }
+        .main-registry{
+            width: 432px;
+            height: 530px;
+            display: inline-block;
+            margin-top: 50px;
+            /* margin: 0;
+            padding: 0; */
+            position: relative;
+            text-align: left;
+            justify-content: space-between;
+        }
+        .main{
+            background-color: transparent;
+            overflow: visible;
+            padding: 0;
+            width: 432px;
+            border: 1px solid #dadde1;
+            border-radius: 6px;
+        }
+        .hinh-anh{
+            position: absolute;
+            top: 12px;
+            right: 10px;
+            z-index: 3;
+            width: 24px;
+            height: 24px;
+        }
+        .text-registry{
+            position: relative;
+            background-color: white;
+            padding-top: 10px;
+            margin-top: 0px;
+            align-items: center;
+            width: 432px;
+            padding: 10px 16px;
+            box-sizing: border-box;
+            z-index: 1;
+        }
+        .dangky{
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 38px;
+            margin-bottom: 0px;
+        }
+        .nhanhde{
+            color: rgb(96, 103, 112);
+            font-size: 15px;
+            line-height: 24px;
+            margin-bottom: 0px;
+            font-weight: 400;
+        }
+        .line{
+            align-items: center;
+            border-bottom: 1px solid #dadde1;
+            display: flex;
+            margin: 20px 16px;
+            text-align: center;
+        }
+        .fullname{
+            width: 400px;
+            display: flex;
+        }
+        .input-ho, .input-ten{
+            width: 170px;
+            margin-left: 15px;
+            padding: 10px;
+            font-size: 15px;
+            border-radius: 6px;
+            border: 1px solid #ccd0d5;
+            background-color: rgb(245, 246, 247);
+        }
+        .mail-phone{
+            margin-bottom: 10px;
+            margin-left: 12px;
+            margin-top: 12px;
+            width: 380px;
+            padding: 10px;
+            font-size: 15px;
+            line-height: 16px;
+            border-radius: 6px;
+            border: 1px solid #ccd0d5;
+            background-color: rgb(245, 246, 247);
+        }
+        .input-mail-phone{
+            background-color: rgb(245, 246, 247);
+            margin: 0px;
+            font-size: 15px;
+            color: rgb(204, 208, 213);
+            border: none;
+        }
+        .birthday, .gender{
+            width: 412px;
+            margin-top: 10px;
+        }
+        .text1{
+            font-size: 12px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 15px;
+        }
+        .img1{
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        select{
+            background-color: white;
+            border:1px solid #ccd0d5;
+            border-radius: 4px;
+        }
+        .listbirthday{
+            display: flex;
+            width: 412px;
+        }
+        #day, #month, #year{
+            width: 120px;
+            color: rgb(28, 30, 33);
+            font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 400;
+            height: 36px;
+            padding: 5px;
+            margin-left: 15px;
+        }
+        .gender{
+            position: relative;
+            text-align: left;
+        }
+        .sex{
+            display: flex;
+            flex-wrap: wrap;
+            margin: -8px -6px -6px;
+            width: 411px;
+        }
+        .input-gender{
+            background-color: #fff;
+            border: 1px solid #ccd0d5;
+            box-sizing: border-box;
+            border-radius: 4px;
+            display: inline-block;
+            flex: 1 0 auto;
+            font-weight: normal;
+            height: 36px;
+            margin-top: 8px;
+            margin-right: 6px;
+            margin-bottom: 6px;
+            margin-left: 21px;
+            padding: 0;
+            position: relative;
+            width: auto;
+        }
+        .label1{
+            color: #1c1e21;
+            display: inline-block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 15px;
+            line-height: 36px;
+            padding: 0 28px 0 10px;
+            width: 100%;
+            font-weight: 400;
+        }
+        .inputs{
+            height: 36px;
+            margin: 0;
+            position: absolute;
+            right: 10px;
+            top: 0;    
+        }
+        p{
+            font-size: 12px;
+            color: rgb(96, 103, 112);
+        }
+        a{
+            text-decoration: none;
+        }
+        .button-regis{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .websubmit{
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            background-color: rgb(0, 164, 0);
+            border-radius: 6px;
+            border: none;
+            padding-left: 32px;
+            padding-right: 32px;
+            text-shadow: none;
+            min-width: 194px;
+            height: 36px;
+        }
+        .websubmit:hover{
+            background-color: rgb(0, 142, 0);
+        }
+
+        a:hover .fa{
+            color: red;
+        }
+        .back-home{
+            width: 80px;
+            height: 24px;
+            font-size: 14px;
+            background-color: green;
+            color: white;
+            border-radius: 5px;
+            position: fixed;
+            margin: 0;
+            padding: 0;
+            justify-content: space-between;
+            text-align: center;
+            right: 10px;
+            bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hidden">
+        <div class="main-registry">
+        <div class="main">
+            <img class="hinh-anh" src="https://static.xx.fbcdn.net/rsrc.php/v3/yC/r/Q0G2UVjVQ4_.png" alt="">
+            <div class="text-registry">
+                <div class="dangky">Đăng Ký</div>
+                <div class="nhanhde">Nhanh chóng và dễ dàng</div>
+            </div>
+            <div class="line"></div>
+            <div class="form-dangky">
+                <form action="#" method="POST">
+                    <div class="fullname">
+                        <div class="lastname">
+                            <input type="text" class="input-ho" name="lastname" placeholder="Họ" required>
+                        </div>
+                        <div class="firstname">
+                            <input type="text" class="input-ten" name="firstname" placeholder="Tên" required>
+                        </div>
+                    </div>
+                    <div class="mail-phone">
+                        <input type="text" class="input-mail-phone" placeholder="Số di động hoặc email" required>
+                    </div>
+                    <div class="mail-phone">
+                        <input type="password" class="input-mail-phone" placeholder="Mật khẩu mới" required>
+                    </div>
+                    <div class="birthday">
+                        <div class="text1">Ngày sinh <a href="#" title="Nhấn để biết thêm thông tin"><img src="data:image/png;base64,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" class="img1"/></a></div>
+                        <div class="listbd">
+                            <select name="birthday-day" id="day" title="Ngày">
+                                <option value="0">Ngày</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10" selected>10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                                <option value="25">25</option>
+                                <option value="26">26</option>
+                                <option value="27">27</option>
+                                <option value="28">28</option>
+                                <option value="29">29</option>
+                                <option value="30">30</option>
+                                <option value="31">31</option>
+                            </select>
+                            <select name="birthday-month" id="month" title="Tháng">
+                                <option value="0">Tháng</option>
+                                <option value="1">Tháng 1</option>
+                                <option value="2">Tháng 2</option>
+                                <option value="3">Tháng 3</option>
+                                <option value="4">Tháng 4</option>
+                                <option value="5">Tháng 5</option>
+                                <option value="6">Tháng 6</option>
+                                <option value="7">Tháng 7</option>
+                                <option value="8">Tháng 8</option>
+                                <option value="9">Tháng 9</option>
+                                <option value="10" selected>Tháng 10</option>
+                                <option value="11">Tháng 11</option>
+                                <option value="12">Tháng 12</option>
+                            </select>
+                            <select name="birthday-year" id="year" title="Năm">
+                                <option value="0">Năm</option>
+                                <option value="1">1991</option>
+                                <option value="2">1992</option>
+                                <option value="3">1993</option>
+                                <option value="4">1994</option>
+                                <option value="5">1995</option>
+                                <option value="6">1996</option>
+                                <option value="7">1997</option>
+                                <option value="8">1998</option>
+                                <option value="9">1999</option>
+                                <option value="10">2000</option>
+                                <option value="11">2001</option>
+                                <option value="12">2002</option>
+                                <option value="13">2003</option>
+                                <option value="14">2004</option>
+                                <option value="15">2005</option>
+                                <option value="16">2006</option>
+                                <option value="17">2007</option>
+                                <option value="18" selected>2008</option>
+                                <option value="19">2009</option>
+                                <option value="20">2010</option>
+                                <option value="21">2011</option>
+                                <option value="22">2012</option>
+                                <option value="23">2013</option>
+                                <option value="24">2014</option>
+                                <option value="25">2015</option>
+                                <option value="26">2016</option>
+                                <option value="27">2017</option>
+                                <option value="28">2018</option>
+                                <option value="29">2019</option>
+                                <option value="30">2020</option>
+                                <option value="31">2021</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="gender">
+                        <div class="text1">Giới tính <a href="#" title="Nhấn để biết thêm thông tin"><img src="data:image/png;base64,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" class="img1"/></a></div>
+                        <span class="sex">
+                            <span class="input-gender">
+                                <label class="label1" for="female">Nữ</label>
+                                <input class="inputs" id="female" type="radio" name="gender" value="female" checked class="gioi-tinh">
+                            </span>
+                            <span class="input-gender">    
+                                <label class="label1" for="male">Nam</label>
+                                <input class="inputs" id="male" type="radio" name="gender" value="male">
+                            </span>
+                            <span class="input-gender">
+                                <label class="label1" for="Others">Tùy chỉnh</label>
+                                <input class="inputs" id="Others" type="radio" name="gender" value="Others">
+                            </span>    
+                        </span>    
+                    </div>
+                    <div class="text3">
+                        <p>Bằng cách nhấp vào Đăng ký, bạn đồng ý với <a href="#" target="blank">Điều khoản</a>, <a href="#" target="blank">Chính sách dữ liệu</a> và <a href="#" target="blank">Chính xác cookies</a>của chúng tôi.Bạn có thể nhận được thông báo của chúng tôi qua SMS và hủy nhận bất cứ lúc nào.</p>
+                    </div>
+                    <div class="button-regis">
+                        <button class="websubmit" type="submit" name="submit-regis"><a href="Main.html">Đăng ký</a></button>
+                    </div>
+                </form>    
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="back-home">
+        <a href="Main.html">
+            <i class="fa fa-home" aria-hidden="true">
+                Back Home
+            </i>
+        </a>
+    </div>    
+</body>
+</html>

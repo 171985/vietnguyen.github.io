@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="images/Logo.png" />
+    <link rel="stylesheet" href="Stypetest.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <style>
+        .about-us {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-left: 10px;
+        }
+        /* .note{
+            caption-side: top;
+            margin-left: 10px;
+            background-color: lightpink;
+            border-radius: 10px;
+        } */ 
+        h1{
+            margin-left: 10px;
+            background-color:lightpink;
+            border-radius: 10px;
+            width: 600px;
+        }
+        table,th, td{
+            border: none;
+            border-collapse: collapse;
+        }
+        th{
+            text-align: right;
+        }
+
+        td{
+            padding: 5px;
+            width: 200px;
+            text-align: left;
+        }
+        a:hover .fa{
+            opacity: 0.7;
+        }
+        p{
+            padding-left: 10px;
+            line-height: 20px;
+            text-indent: 20px;
+        }       
+    </style>
+</head>
+<body>
+    <div class="header-main">
+        <div class="header">
+            <div class="logo">
+                <img src="images/Logo.png" alt="VNmobile" title="VN mobile">
+            </div>
+            <!-- <div class="space"></div> -->
+            <div class="form-login">
+                <div class="login">
+                    <form action="productdetail.html" method="POST">
+                        <input type="text" id="username" value="" placeholder="Email or Tên đăng nhập">
+                        <input type="password" name="password" id="password" placeholder="Password">
+                        <button type="submit" class="dangnhap">Đăng Nhập</button>
+                        <a href="Registry.html"><input type="button" value="Đăng Ký" id="dangky" placeholder="Đăng Ký"></a>
+                    </form>
+                </div>
+            </div>
+            <!-- <div class="dangky">Chưa có tài khoản <a href="Registry.html">Đăng Ký</a></div> -->
+        </div>
+        <div class="menu-bar">
+        <ul>
+            <li>
+                <a href="Main.html">
+                    <i class="fa fa-home" aria-hidden="true"></i>Trang Chủ
+               </a>
+            </li>
+            <li>
+                <a href="Main.html #Sp-Spe"><i class="fa fa-mobile" aria-hidden="true"></i> Điện Thoại</a>
+                <div class="sub-menu">
+                    <ul>
+                        <li class="hover-me"><a href="Main.html #VSMart">Vsmart <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                            <div class="sub-menu2">
+                                <ul>
+                                    <li><a href="productdetail.html">Vsmart Live</a></li>
+                                    <li><a href="productdetail.html">Vsmart Active</a></li>
+                                    <li><a href="productdetail.html">Vsmart Joy</a></li>
+                                    <li><a href="productdetail.html">Vsmart Aris</a></li>
+                                </ul>
+                            </div>
+                        </li>                          
+                        <li class="hover-me">
+                            <a href="Main.html #SamSung">Samsung <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                            <div class="sub-menu2">
+                                <ul>
+                                    <li><a href="productdetail.html">Samsung Note</a></li>
+                                    <li><a href="productdetail.html">Samsung S</a></li>
+                                    <li><a href="productdetail.html">Samsung A</a></li>
+                                    <!-- <li><a href="productdetail.html">Samsung J</a></li> -->
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="hover-me">
+                            <a href="Main.html #Apple">Apple <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                            <div class="sub-menu2">
+                                <ul>
+                                    <li><a href="productdetail.html">Iphone 11</a></li>
+                                    <!-- <li><a href="productdetail.html">Iphone 12</a></li> -->
+                                    <li><a href="productdetail.html">Iphone XS</a></li>
+                                    <li><a href="productdetail.html">Iphone Cũ</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="Main.html #PhuKien"><i class="fa fa-user" aria-hidden="true"></i>Phụ Kiện</a>
+                <div class="sub-menu">
+                    <ul>
+                        <li><a href="productdetail.html">Tai Nghe</a></li>
+                        <li><a href="productdetail.html">Sạc Dự Phòng</a></li>
+                        <li><a href="productdetail.html">Ốp Lưng</a></li>
+                    </ul> 
+                </div>
+            </li>
+            <li>
+                <a href="Aboutus.html" title="about us"><i class="fa fa-user" aria-hidden="true"></i>ABOUT US</a>
+                <div class="sub-menu">
+                    <ul>
+                        <li><a href="Aboutus.html">Về chúng tôi</a></li>
+                        <li><a href="Aboutus.html">Về shop</a></li>
+                    </ul> 
+                </div>
+            </li>
+            <li><a href="productdetail.html"><i class="fa fa-phone" aria-hidden="true"></i>CONTACT</a></li>
+        </ul>
+        </div>
+    </div>
+    <div class="main-us">
+        <div class="about-us" id="aboutus">
+            <h1>About Us</h1>
+            <p>Full Name: Nguyễn Quốc Việt</p>
+            <p>Class : Web FrontEnd ReactJS</p>
+            <p>Beginning: 18/09/2020</p>
+            <p>End : 26/03/2020</p>
+            <p>Time : 9:00 AM - 12: 00 AM</p>
+            <p>Date: Tuesday - Thurday - Satuday</p>
+        </div>
+        <div class="about-shop" id="aboutshop">
+            <h1>About Shop</h1>            
+            <p style="text-align: justify;">Shop VNMobile chính thức mở cửa vào năm 2011, địa chỉ chuyên bán lẻ các sản phẩm kỹ thuật số di động bao gồm điện thoại di động và phụ kiện. </p>
+            <p style="text-align: justify;">Với nhiều năm hoạt động trong lĩnh vực thiết bị công nghệ, Đức Huy luôn là đối tác thân thiết của nhiều công ty lớn Samsung, iPhone, Sony, Asus, OPPO… </p>
+            <p style="text-align: center;">
+                <img src="images/vnmobile.jpg" alt="shop" title="cửa hàng" style="width:800px; height:530px" />
+            </p>
+            <p style="text-align: center;"><em>VN Mobile chuyên cung cấp sản phẩm chính hãng</em></p>
+            <br />
+            <p style="text-align: justify;">VN Mobile luôn mang đến nguồn hàng phong phú, chất lượng từ hàng chính hãng cho đến hàng xách tay và đặc biệt là giá rẻ cạnh tran</p>
+            <p style="text-align: justify;">Không những vậy, khi mua hàng tại Đức Huy Mobile sẽ hưởng được chính sách bảo hành tốt: Bảo hành chính hãng 12 tháng, bao test 1 đổi 1 trong 30 ngày. </p>
+            <p style="text-align: justify;">Ngoài ra, chính sách trả góp 0% từ thẻ tín dụng hoặc chính sách trả góp lãi suất thấp không cần thẻ tín dụng cũng giúp khách hàng có thể tiết kiệm được chi phí hoặc dễ dàng mua được sản phẩm mà mình muốn nhưng không quá lo lắng về tài chính. </p>
+            <p style="text-align: center;">
+                <img src="images/vnmobile1.jpg" alt="cửa hàng" title="cửa hàng">
+            </p>
+            <p style="text-align: center;">Sản phẩm mua tại VNMobile đều áp dụng chính sách bảo hành tốt nhất</p>
+            <br />
+            <p style="text-align: justify;">Chúng tôi luôn cố gắng để mang đến cho khách hàng sản phẩm chất lượng, chính sách bảo hành tốt và giá cả rẻ nhất. Mang đến sự hài lòng cho khách hàng là mong muốn và phương châm kinh doanh của công ty. </p>
+        </div>
+    </div>
+    <div class="line"></div>
+        <div class="footer">
+            <div class="footer-top">
+                <div class="row1">
+                <div class="row11">
+                    <ul class="text-link">
+                        <li class="level1">
+                            <a href="#">Hướng dẫn thanh toán</a>
+                        </li>
+                        <li class="level1">
+                            <a href="#">Hướng dẫn đặt hàng</a>
+                        </li>
+                        <li class="level1">
+                            <a href="#">Quy định bảo hành - đổi trả</a>
+                        </li>
+                        <li class="level1">
+                            <a href="#">Chính sách bảo mật</a>
+                        </li>
+                        <li class="level1">
+                            <a href="#">Chính sách giao hàng tại nhà</a>
+                        </li>
+                        <li class="level1">
+                            <a href="#">Hướng dẫn mua trả góp</a>
+                        </li>
+                    </ul>
+                </div>
+                </div>
+                <div class="row1">
+                <div class="address">
+                    <p>Địa Chỉ: 
+                        <span class="tomau">
+                            Đảo rùa, Hồ gươm, Hoàn Kiếm, HN
+                            <br>(Ở giữa hồ gươm, quý khách vui lòng thuê thuyền đi ra shop)
+                         </span>
+                    </p>
+                    <div class="callfree">Tổng Đài Hỗ Trợ:
+                        <span style="font-weight: normal;">(Tư vấn miễn phí)</span>
+                    </div>
+                    <div>Bán hàng (8h30-21h):
+                        <span class="tomau">0979.749.591 - 087.992.0469</span>
+                    </div>
+                    <div>Hỗ trợ (8h30-21h):
+                        <span class="tomau">0979.749.591</span>
+                    </div>
+                    <div>Khiếu nại (9h30-20h):
+                        <span class="tomau">087.992.0469</span>
+                    </div>
+                </div>
+                </div>
+                <div class="row1">
+                    <div class="communicate">
+                        Author: Nguyễn Quốc Việt
+                    </div>
+                    <div class="commulicate">
+                        Class: Web FrontEnd - React
+                    </div>
+                    <div class="communicate">
+                        Bài tập thực hành HTML & CSS
+                    </div>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="footer-bottom">
+                Bản quyền © 2020 <a href="Main.html">VNmobile</a>  
+            </div>
+        </div>
+        <a href="Main.html"><i class="fa fa-home" aria-hidden="true"></i></a>
+</body>
+</html>

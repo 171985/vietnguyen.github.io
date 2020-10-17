@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail</title>
+    <link rel="icon" href="images/Logo.png" />
+    <link rel="stylesheet" href="Stypetest.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <style>
+        .row{
+            margin-left: 10px;
+            max-width: 1200px;
+            margin-top: 20px;
+        }
+        .masp{
+            width: 250px;
+            height: 38px;
+            background-color: lightpink;
+            border-radius: 20px;
+            text-align: left;
+            margin: 10px 0;
+        }        
+        .box-content{
+            margin: 0 10px;
+            display: block;
+            overflow: hidden;
+            border: 1px solid greenyellow;
+            border-radius: 5px;
+            font-size: 14px;
+            line-height: 18px;
+        }
+        .left-content{
+            float: left;
+            width: 50%;
+            overflow: hidden;
+            position: relative;
+            margin: 20px 10px;
+        }
+        .right-content{
+            float: right;
+            width: 45%;
+            overflow: visible;
+            margin: 20px 10px;
+        }
+        .table-para{
+            display: block;
+            overflow: hidden;
+        }
+        .para{
+            display: block;
+            position: relative;
+            overflow: hidden;
+            background: white;
+            padding-top: 10px;
+        }
+
+        h2{
+            font-size: 20px;
+            line-height: 20px;
+            color: #333333;
+            padding: 8px 8px;
+        }
+        .right-content ul {
+            list-style: none;
+        }
+        .para li {
+            display: table;
+            background: #fff;
+            width: 100%;
+            border-top: 1px solid #eee;
+            padding: 5px 0;
+}
+        .right-content ul li span{
+            display: table-cell;
+            width: 40%;
+            vertical-align: top;
+            padding: 5px 0;
+            font-size: 14px;
+            color: #666666;
+        }
+        .right-content ul li div{
+            display: table-cell;
+            width: auto;
+            vertical-align: top;
+            padding: 5px 4px;
+            font-size: 14px;
+            color: #666666;
+        }
+        .price{
+            font-size: 18px;
+            color: red;
+            margin: 10px;
+            font-weight: bold;
+        }
+        .photos{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-main">
+        <div class="header">
+            <div class="logo">
+                <img src="images/Logo.png" alt="VNmobile" title="VN mobile">
+            </div>
+            <!-- <div class="space"></div> -->
+            <div class="form-login">
+                <div class="login">
+                    <form action="productdetail.html" method="POST">
+                        <input type="text" id="username" value="" placeholder="Email or Tên đăng nhập">
+                        <input type="password" name="password" id="password" placeholder="Password">
+                        <button type="submit" class="dangnhap">Đăng Nhập</button>
+                        <a href="Registry.html"><input type="button" value="Đăng Ký" id="dangky" placeholder="Đăng Ký"></a>
+                    </form>
+                </div>
+            </div>
+            <!-- <div class="dangky">Chưa có tài khoản <a href="Registry.html">Đăng Ký</a></div> -->
+        </div>
+        <div class="menu-bar">
+        <ul>
+            <li>
+                <a href="Main.html">
+                    <i class="fa fa-home" aria-hidden="true"></i>Trang Chủ
+               </a>
+            </li>
+            <li>
+                <a href="Main.html #Sp-Spe"><i class="fa fa-mobile" aria-hidden="true"></i> Điện Thoại</a>
+                <div class="sub-menu">
+                    <ul>
+                        <li class="hover-me"><a href="Main.html #VSMart">Vsmart <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                            <div class="sub-menu2">
+                                <ul>
+                                    <li><a href="productdetail.html">Vsmart Live</a></li>
+                                    <li><a href="productdetail.html">Vsmart Active</a></li>
+                                    <li><a href="productdetail.html">Vsmart Joy</a></li>
+                                    <li><a href="productdetail.html">Vsmart Aris</a></li>
+                                </ul>
+                            </div>
+                        </li>                          
+                        <li class="hover-me">
+                            <a href="Main.html #SamSung">Samsung <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                            <div class="sub-menu2">
+                                <ul>
+                                    <li><a href="productdetail.html">Samsung Note</a></li>
+                                    <li><a href="productdetail.html">Samsung S</a></li>
+                                    <li><a href="productdetail.html">Samsung A</a></li>
+                                    <!-- <li><a href="productdetail.html">Samsung J</a></li> -->
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="hover-me">
+                            <a href="Main.html #Apple">Apple <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                            <div class="sub-menu2">
+                                <ul>
+                                    <li><a href="productdetail.html">Iphone 11</a></li>
+                                    <!-- <li><a href="productdetail.html">Iphone 12</a></li> -->
+                                    <li><a href="productdetail.html">Iphone XS</a></li>
+                                    <li><a href="productdetail.html">Iphone Cũ</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="Main.html #PhuKien"><i class="fa fa-user" aria-hidden="true"></i>Phụ Kiện</a>
+                <div class="sub-menu">
+                    <ul>
+                        <li><a href="productdetail.html">Tai Nghe</a></li>
+                        <li><a href="productdetail.html">Sạc Dự Phòng</a></li>
+                        <li><a href="productdetail.html">Ốp Lưng</a></li>
+                    </ul> 
+                </div>
+            </li>
+            <li>
+                <a href="Aboutus.html" title="about us"><i class="fa fa-user" aria-hidden="true"></i>ABOUT US</a>
+                <div class="sub-menu">
+                    <ul>
+                        <li><a href="Aboutus.html">Về chúng tôi</a></li>
+                        <li><a href="Aboutus.html">Về shop</a></li>
+                    </ul> 
+                </div>
+            </li>
+            <li><a href="Contact.html"><i class="fa fa-phone" aria-hidden="true"></i>CONTACT</a></li>
+        </ul>
+        </div>
+    </div>
+    <div class="dress-link">
+        <a href="Main.html">Trang Chủ</a> <i class="fa fa-angle-right" aria-hidden="true"></i> <a href="productdetail.html">Product Detail </a>
+        <i class="fa fa-angle-right" aria-hidden="true"></i> <a href="Main.html #PhuKien">PhuKien</a>      
+    </div>
+    <div class="row" id="Tainghe">
+        <div class="masp">
+            <h2>Tai Nghe SamSung</h2>
+        </div>
+        <div class="box-content">
+            <div class="left-content">
+                <div>
+                    <img src="images/phukien/tai-nghe-bluetooth-airpods-pro.jpg" alt="tai-nghe-bluetooth-airpods-pro" title="tai-nghe-bluetooth-airpods-pro">
+                </div>
+                <div class="price">Price: 4.090.000 đ</div>    
+            </div>
+            <div class="right-content">
+                <div class="table-para">
+                    <h2>Thông Số Kỹ Thuật</h2>
+                    <ul class="para">
+                        <li class="p22">
+                            <span>Tương thích</span>
+                            <div>MacOS (Macbook, iMac)iOS (iPhone)</div>
+                        </li>
+                        <li class="p22">
+                            <span>Cổng sạc:</span>
+                            <div>Lightning</div>
+                        </li>
+                        <li class="p22">
+                            <span>Công nghệ âm thanh</span>
+                            <div>Active Noise CancellingAdaptive EQ</div>
+                        </li>
+                        <li class="p22">
+                            <span>Thời gian sử dụng</span>
+                            <div>4.5 giờ nghe nhạc, 3.5 giờ đàm thoại (chế độ chống ồn chủ động)20 giờ nghe nhạc, 18 giờ đàm thoại (sử dụng với hộp sạc)</div>
+                        </li>
+                        <li class="p22">
+                            <span>Kết nối cùng lúc</span>
+                            <div>1 thiết bị</div>
+                        </li>
+                        <li class="p22">
+                            <span>Phím điều khiển</span>
+                            <div>Mic thoạiNghe/nhận cuộc gọiPhát/dừng chơi nhạcChuyển bài hát</div>
+                        </li>
+                        <li class="p22">
+                            <span>Trọng lượng</span>
+                            <div>5.4g/1 tai nghe, 45.6g/hộp sạc</div>
+                        </li>
+                        <li class="p22">
+                            <span>Thương hiệu</span>
+                            <div>Mỹ</div>
+                        </li>
+                        <li class="p22">
+                            <span>Sản xuất</span>
+                            <div>Việt Nam</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" id="SDP">
+        <div class="masp">
+            <h2>Sạc Dự Phòng</h2>
+        </div>
+        <div class="box-content">
+            <div class="left-content">
+                <div class="photos">
+                    <img src="images/phukien/pin-sac-du-phong-10000mah.jpg" alt="pin-sac-du-phong-10000mah" title="pin-sac-du-phong-10000mah">
+                </div>
+                <div class="price">Giá: 390.000 đ</div>    
+            </div>
+            <div class="right-content">
+                <div class="table-para">
+                    <h2>Thông Số Kỹ Thuật</h2>
+                    <ul class="para">
+                        <li class="p22">
+                            <span>Hiệu suất sạc</span>
+                            <div>60%</div>
+                        </li>
+                        <li class="p22">
+                            <span>Dung lượng pin</span>
+                            <div>10.000 mAh</div>
+                        </li>
+                        <li class="p22">
+                            <span>Thời gian sạc đầy pin</span>
+                            <div>19 - 20 giờ (dùng Adapter 1A)10 - 11 giờ (dùng Adapter 2A)</div>
+                        </li>
+                        <li class="p22">
+                            <span>Nguồn vào</span>
+                            <div>Type C: 5V - 3A, 9V - 3A, 12V - 3A, 15V - 3A, 20V - 2.25A</div>
+                        </li>
+                        <li class="p22">
+                            <span>Nguồn ra</span>
+                            <div>USB QC: 5V - 2.4A, 9V - 2A, 12V - 1.5AType C: 5V - 3A, 9V - 3A, 12V - 3A, 15V - 3A, 20V - 2A</div>
+                        </li>
+                        <li class="p22">
+                            <span>Lõi pin</span>
+                            <div>Polymer</div>
+                        </li>
+                        <li class="p22">
+                            <span>Công nghệ</span>
+                            <div>Delivery</div>
+                        </li>
+                        <li class="p22">
+                            <span>Kích thước</span>
+                            <div>Dài 15cm - Rộng 7.2cm - Dày 2.5cm</div>
+                        </li>
+                        <li class="p22">
+                            <span>Trọng lượng</span>
+                            <div>532 g</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" id="OL">
+        <div class="masp">
+            <h2>Ốp Lưng S8 </h2>
+        </div>
+        <div class="box-content">
+            <div class="left-content">
+                <div>
+                    <img src="images/phukien/op-lung-galaxy-s8.jpg" alt="op-lung-galaxy-s8" title="op-lung-galaxy-s8">
+                </div>
+                <div class="price">Price: 199.000</div>
+            </div>
+            <div class="right-content">
+                <div class="table-para">
+                    <h2>Mô tả</h2>
+                    <ul class="para">
+                        <li class="p22">
+                            <span>Chất liệu nhựa dẻo</span>
+                            <!-- <div>Nhựa dẻo</div> -->
+                        </li>
+                        <li class="p22">
+                            <span>Kiểu dáng thời trang và đẹp mắt</span>
+                            <!-- <div>Android 9</div> -->
+                        </li>
+                        <li class="p22">
+                            <span>Thiết kế vừa vặn và ôm sát thân máy</span>
+                            <!-- <div>Chính 48 MP & Phụ 8 MP, 5 MP</div> -->
+                        </li>
+                        <li class="p22">
+                            <span>Dễ dàng tháo/lắp ốp vào máy</span>
+                            <!-- <div>32 MP</div> -->
+                        </li>
+                        <!-- <li class="p22">
+                            <span>CPU</span>
+                            <div>Exynos 9610 8 nhân</div>
+                        </li>
+                        <li class="p22">
+                            <span>RAM</span>
+                            <div>4 GB</div>
+                        </li>
+                        <li class="p22">
+                            <span>Bộ Nhớ Trong</span>
+                            <div>64 GB</div>
+                        </li>
+                        <li class="p22">
+                            <span>SIM</span>
+                            <div>2 Nano SIM( sim 2 chung khe thẻ nhớ), hỗ trợ 4G</div>
+                        </li>
+                        <li class="p22">
+                            <span>Pin</span>
+                            <div>4000 mAh, hỗ trợ sạc nhanh</div>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" id="Tainghe1">
+        <div class="masp">
+            <h2>Tai Nghe Airpod</h2>
+        </div>
+        <div class="box-content">
+            <div class="left-content">
+                <div>
+                    <img src="images/phukien/tai-nghe-bluetooth-airpods-pro.jpg" alt="tai-nghe-bluetooth-airpods-pro" title="tai-nghe-bluetooth-airpods-pro">
+                </div>
+                <div class="price">Price: 2.090.000 đ</div>    
+            </div>
+            <div class="right-content">
+                <div class="table-para">
+                    <h2>Thông Số Kỹ Thuật</h2>
+                    <ul class="para">
+                        <li class="p22">
+                            <span>Tương thích</span>
+                            <div>MacOS (Macbook, iMac)iOS (iPhone)</div>
+                        </li>
+                        <li class="p22">
+                            <span>Cổng sạc:</span>
+                            <div>Lightning</div>
+                        </li>
+                        <li class="p22">
+                            <span>Công nghệ âm thanh</span>
+                            <div>Active Noise CancellingAdaptive EQ</div>
+                        </li>
+                        <li class="p22">
+                            <span>Thời gian sử dụng</span>
+                            <div>4.5 giờ nghe nhạc, 3.5 giờ đàm thoại (chế độ chống ồn chủ động)20 giờ nghe nhạc, 18 giờ đàm thoại (sử dụng với hộp sạc)</div>
+                        </li>
+                        <li class="p22">
+                            <span>Kết nối cùng lúc</span>
+                            <div>1 thiết bị</div>
+                        </li>
+                        <li class="p22">
+                            <span>Phím điều khiển</span>
+                            <div>Mic thoạiNghe/nhận cuộc gọiPhát/dừng chơi nhạcChuyển bài hát</div>
+                        </li>
+                        <li class="p22">
+                            <span>Trọng lượng</span>
+                            <div>5.4g/1 tai nghe, 45.6g/hộp sạc</div>
+                        </li>
+                        <li class="p22">
+                            <span>Thương hiệu</span>
+                            <div>Mỹ</div>
+                        </li>
+                        <li class="p22">
+                            <span>Sản xuất</span>
+                            <div>Trung quốc</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" id="SDP1">
+        <div class="masp">
+            <h2>Sạc Dự Phòng 5000 mah</h2>
+        </div>
+        <div class="box-content">
+            <div class="left-content">
+                <div class="photos">
+                    <img src="images/phukien/pin-sac-du-phong-10000mah.jpg" alt="pin-sac-du-phong-10000mah" title="pin-sac-du-phong-10000mah">
+                </div>
+                <div class="price">Giá: 190.000 đ</div>    
+            </div>
+            <div class="right-content">
+                <div class="table-para">
+                    <h2>Thông Số Kỹ Thuật</h2>
+                    <ul class="para">
+                        <li class="p22">
+                            <span>Hiệu suất sạc</span>
+                            <div>60%</div>
+                        </li>
+                        <li class="p22">
+                            <span>Dung lượng pin</span>
+                            <div>5.000 mAh</div>
+                        </li>
+                        <li class="p22">
+                            <span>Thời gian sạc đầy pin</span>
+                            <div>19 - 20 giờ (dùng Adapter 1A)10 - 11 giờ (dùng Adapter 2A)</div>
+                        </li>
+                        <li class="p22">
+                            <span>Nguồn vào</span>
+                            <div>Type C: 5V - 3A, 9V - 3A, 12V - 3A, 15V - 3A, 20V - 2.25A</div>
+                        </li>
+                        <li class="p22">
+                            <span>Nguồn ra</span>
+                            <div>USB QC: 5V - 2.4A, 9V - 2A, 12V - 1.5AType C: 5V - 3A, 9V - 3A, 12V - 3A, 15V - 3A, 20V - 2A</div>
+                        </li>
+                        <li class="p22">
+                            <span>Lõi pin</span>
+                            <div>Polymer</div>
+                        </li>
+                        <li class="p22">
+                            <span>Công nghệ</span>
+                            <div>Delivery</div>
+                        </li>
+                        <li class="p22">
+                            <span>Kích thước</span>
+                            <div>Dài 15cm - Rộng 7.2cm - Dày 2.5cm</div>
+                        </li>
+                        <li class="p22">
+                            <span>Trọng lượng</span>
+                            <div>532 g</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" id="OL1">
+        <div class="masp">
+            <h2>Ốp Lưng S10 Live </h2>
+        </div>
+        <div class="box-content">
+            <div class="left-content">
+                <div>
+                    <img src="images/phukien/op-lung-galaxy-s8.jpg" alt="op-lung-galaxy-s10" title="op-lung-galaxy-s10">
+                </div>
+                <div class="price">Price: 299.000</div>
+            </div>
+            <div class="right-content">
+                <div class="table-para">
+                    <h2>Mô tả</h2>
+                    <ul class="para">
+                        <li class="p22">
+                            <span>Chất liệu nhựa dẻo</span>
+                            <!-- <div>Nhựa dẻo</div> -->
+                        </li>
+                        <li class="p22">
+                            <span>Kiểu dáng thời trang và đẹp mắt</span>
+                            <!-- <div>Android 9</div> -->
+                        </li>
+                        <li class="p22">
+                            <span>Thiết kế vừa vặn và ôm sát thân máy</span>
+                            <!-- <div>Chính 48 MP & Phụ 8 MP, 5 MP</div> -->
+                        </li>
+                        <li class="p22">
+                            <span>Dễ dàng tháo/lắp ốp vào máy</span>
+                            <!-- <div>32 MP</div> -->
+                        </li>
+                        <!-- <li class="p22">
+                            <span>CPU</span>
+                            <div>Exynos 9610 8 nhân</div>
+                        </li>
+                        <li class="p22">
+                            <span>RAM</span>
+                            <div>4 GB</div>
+                        </li>
+                        <li class="p22">
+                            <span>Bộ Nhớ Trong</span>
+                            <div>64 GB</div>
+                        </li>
+                        <li class="p22">
+                            <span>SIM</span>
+                            <div>2 Nano SIM( sim 2 chung khe thẻ nhớ), hỗ trợ 4G</div>
+                        </li>
+                        <li class="p22">
+                            <span>Pin</span>
+                            <div>4000 mAh, hỗ trợ sạc nhanh</div>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="line"></div>
+    <div class="footer">
+            <div class="footer-top">
+                <div class="row1">
+                <div class="row11">
+                    <ul class="text-link">
+                        <li class="level1">
+                            <a href="productdetail.html">Hướng dẫn thanh toán</a>
+                        </li>
+                        <li class="level1">
+                            <a href="productdetail.html">Hướng dẫn đặt hàng</a>
+                        </li>
+                        <li class="level1">
+                            <a href="productdetail.html">Quy định bảo hành - đổi trả</a>
+                        </li>
+                        <li class="level1">
+                            <a href="productdetail.html">Chính sách bảo mật</a>
+                        </li>
+                        <li class="level1">
+                            <a href="productdetail.html">Chính sách giao hàng tại nhà</a>
+                        </li>
+                        <li class="level1">
+                            <a href="productdetail.html">Hướng dẫn mua trả góp</a>
+                        </li>
+                    </ul>
+                </div>
+                </div>
+                <div class="row1">
+                <div class="address">
+                    <p>Địa Chỉ: 
+                        <span class="tomau">
+                            Đảo rùa, Hồ gươm, Hoàn Kiếm, HN
+                            <br>(Ở giữa hồ gươm, quý khách vui lòng thuê thuyền đi ra shop)
+                         </span>
+                    </p>
+                    <div class="callfree">Tổng Đài Hỗ Trợ:
+                        <span style="font-weight:normal;">(Tư vấn miễn phí)</span>
+                    </div>
+                    <div>Bán hàng (8h30-21h):
+                        <span class="tomau">0979.749.591 - 087.992.0469</span>
+                    </div>
+                    <div>Hỗ trợ (8h30-21h):
+                        <span class="tomau">0979.749.591</span>
+                    </div>
+                    <div>Khiếu nại (9h30-20h):
+                        <span class="tomau">087.992.0469</span>
+                    </div>
+                </div>
+                </div>
+                <div class="row1">
+                    <div class="communicate">
+                        Author: Nguyễn Quốc Việt
+                    </div>
+                    <div class="commulicate">
+                        Class: Web FrontEnd - React
+                    </div>
+                    <div class="communicate">
+                        Bài tập thực hành HTML & CSS
+                    </div>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="footer-bottom">
+                Bản quyền © 2020 <a href="Main.html">VNmobile</a>  
+            </div>
+    </div>
+    <a href="#" class="cd-top"><i class="fa fa-home" aria-hidden="true"></i></a>
+</body>
+</html>
