@@ -1,4 +1,4 @@
-document.writeln('Tất cả các bài trả về trong Element');
+document.writeln('Tất cả các bài trả về trong Element <br>');
 
 //Bài 1: chuyển đổi từ độ F sang độ C & ngược lại
 function changeCtoF(a){
