@@ -9,52 +9,42 @@ function timSoAm(Ar1){
 }
 
 // Bài 2 Tìm min, max trong 1 mảng
-function findMinArray(Ar2){
-    let min = Ar2[0]
-    for (let i = 1; i < Ar2.length; i++) {
+function findMinMaxArray(Ar2){
+    let min=0;
+    let max=0; 
+    for (let i = 0; i < Ar2.length; i++) {
         if(min > Ar2[i]){
             min= Ar2[i];
         }
     }
-    return min;
-}
-
-function findMaxArray(Ar3){
-    let max = Ar3[0]
-    for (let i = 1; i < Ar3.length; i++) {
-        if(max < Ar3[i]){
-            max = Ar3[i];
+    for (let j = 1; j < Ar2.length; j++) {
+        if(max < Ar2[j]){
+            max = Ar2[j];
         }
     }
-    return max;
+    return "số nhỏ nhất là: " + min + " Số lớn nhất là: " + max;
 }
+
 
 //Bài 3 Viết hàm trả về vị trí đầu tiên của số lẻ, vị trí cuối cùng của số chẵn trong mảng bất kì
 
-function findLastEven(Ar4){    
-    for(let i=Ar4.length-1; i>=0; i--)
+
+function findLastEvenFirstOdd(Ar6){   
+    let chancuoi;
+    let ledau;
+    for(let i=0; i< Ar6.length; i++)
     {
-        if(Ar4[i]%2==0)
+        if(Ar6[i]%2 == 0)
         {
-            // chancuoi = Ar4[i]
-            return Ar4[i];
+            chancuoi = Ar6[i];
         }
     }
-    //nếu không có số chẵn trong mảng thì trả về giá trị -1
-    return -1;
-}
-function findFirstOdd(Ar5) {
-    // let ledau = 0;
-    for (let j = 0; j < Ar5.length; j++) {
-        if (Ar5[j]%2 ==1) {
+    for (let j = Ar6.length; j >= 0; j--) {
+        if (Ar6[j]%2 != 0) {
             // ledau = Ar5[j];
             // return ledau;
-            return Ar5[j];
+            ledau = Ar6[j];
         }
     }
-    //nếu trong mảng không có số lẻ thì trả về giá trị -1
-    return -1;
+    return "số chẵn cuối là: " + chancuoi + " Số lẻ đầu là: " + ledau;
 }
-    
-    
-    
