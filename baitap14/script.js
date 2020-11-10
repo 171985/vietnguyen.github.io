@@ -71,7 +71,7 @@ function checkMonth(months, years) {
             return "Tháng " + months + "/" + years + " có 30 ngày.";
             break;
         case 2:
-            if (years % 4 == 0 && ) {
+            if (years % 4 == 0 && years % 100 !=0 || years % 400 ==0) {
                 return "Tháng " + months + "/" + years + " có 29 ngày.";
                 break;
             }
