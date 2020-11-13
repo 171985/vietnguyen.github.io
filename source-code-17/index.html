@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+
+<body>
+    
+    <script>
+        //Bai2 Cho 1 mảng có độ dài lớn hơn 2, chứa các số khác nhau. Hãy viết hàm tìm ra số lớn thứ nhì trong mảng.
+        function findLasttMax(Arr) {
+            let newArr = Arr.sort(function (a, b) { return b - a });
+            console.log(newArr);
+            console.log(`số lớn thứ 2 trong mảng là ${newArr[1]}`);
+        }
+
+        //Bài 3 Cho 1 mảng các chuỗi bất kỳ có độ dài khác nhau. Hãy viết hàm tìm ra chuỗi có độ dài lớn nhất.
+
+        //cách 1
+        function arrLengMax(arr) {
+            let maxLengArr;
+            let maxarr;
+            if (arr.length < 1) {
+                return "Nhập vào 1 chuỗi";
+            }
+            for (let k = 0; k < arr.length; k++) {
+                for (let m = 0; m < arr.length; m++) {
+                    if (arr[k].length == arr[m].length) {
+                        return "Độ dài các chuỗi không được bằng nhau";
+                    }
+                }
+            }
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = 1; j <= arr.length - 1; j++) {
+                    if ((arr[i].length) < (arr[j].length)) {
+                        maxLengArr = arr[j].length;
+                        maxarr = arr[j]
+                    }
+                }
+
+            }
+            // console.log(maxLengArr);
+            console.log(maxarr);
+        }
+
+        //cách 2
+        function arMax(arr1) {
+            let newarray = arr1.sort(function (a, b) { return b.length - a.length })
+            return newarray[0]
+        }
+
+        /*Bài 4 Viết hàm có 2 tham số là 2 chuỗi string và target khác rỗng, dùng để kiểm tra chuỗi string có kết
+        thúc bởi chuỗi target hay không. Kết quả trả về là true hoặc false.*/
+        //Note: lấy độ dài target, cắt string bằng độ dài của chuỗi target, so sanh
+        //dùng indexof(), lastindexof() hoặc dùng 2 vòng lặp for
+
+        //Bài 4
+
+        //cach1
+        function checkString(str, target) {
+            if (str.length < 1 || target.length < 1) {
+                return "Nhập vào chuỗi";
+            }
+            let n = target.length;
+            let k = str.substring(str.length - n, str.length + 1)
+            if (k == target) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        //cach2
+        function checkstring1(str1, target1) {
+            let flag = false;
+            for (let i = str1.length; i > ((str1.length) - (target1.length)); i--) {
+                for (let j = target1.length; j > 0; j--) {
+                    if (str1[i] == target1[j]) {
+                        flag = true;
+                    } else {
+                        flag = false;
+                    }
+                }
+            }
+            if (flag == true) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        //bài 5
+
+        //cách 1
+        function checkDoubleElement(arr2) {
+            let m = 0;
+            for (let i = 0; i < arr2.length - 1; i++) {
+                for (let j = i + 1; j < arr2.length; j++) {
+                    /*Tang bien dem bien_dem khi tim thay phan tu giong nhau.*/
+                    if (arr2[i] == arr2[j]) {
+                        m++;
+                        break;
+                    }
+                }
+            }
+            if (m > 0) {
+                return true
+            } else {
+                return false;
+            }
+        }
+
+
+        //cách 2
+        function checkFloor(arr3) {
+            let n = 0;
+            // let m = arr[0];
+            for (let i = 1; i < arr3.length; i++) {
+                if (arr3.indexOf(arr3[i - 1]) != -1) {
+                    n++;
+                }
+            }
+            if (n > 0) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        
+    </script>
+
+</body>
+
+</html>

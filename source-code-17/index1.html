@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            font-size: 16px;
+            text-indent: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <p id="dv1" class="paragrap">
+            Từ đầu đến giờ, các bạn đã được nghe nhiều về thành phố lớn, về một thị xã du lịch.
+            Các bạn cũng đã được bạn Hoài kể cho nghe về một vùng quê yên bình, hiếu học và cũng rất đẹp nữa.
+            Bây giờ, các bạn hãy nghe mình kể về một buôn làng thuộc một vùng núi - nơi mình được sinh ra và lớn lên ở
+            đó
+            nhé.
+        </p>
+        <p id="dv2" class="paragrap">
+            Mình sinh ra và lớn lên tại buôn Chư Lênh thuộc vùng Tây Nguyên.
+            Cũng như bao nhiêu buôn làng khác ở núi rừng Tây Nguyên, buôn Chư Lênh của mình thuộc vùng rừng núi.
+            Quê mình đẹp lắm. Nơi ấy có rừng xanh bạt ngàn. Mỗi mùa thiên nhiên lại có một vẻ đẹp khác nhau.
+            Mùa xuân, trăm hoa đua nở, cây cối đâm chồi nảy lộc. Hội xuân tổ chức rất vui.
+            Người người trong những bộ quần áo nhiều màu sắc cùng đổ về căn nhà sàn của buôn để vui hội.
+        </p>
+        <p id="dv3" class="paragrap">
+            Mùa hè, trời không nắng gắt.
+            Cây cối nhiều đã đem lại bóng mát cho con người.
+            Mùa đông, trời tiết có lạnh hơn, nhưng bếp lửa hồng và ché rượu cần đã sưởi ấm lòng người.
+            Vui nhất, hạnh phúc nhất, trang trọng nhất là ngày buôn mình đón cô giáo đến mở trường học cho buôn mình.
+            Mới sáng sớm, căn nhà sàn người đã chật ních như đi hội.
+            Trưởng buôn đứng ở giữa nhà để đón cô giáo người khách quý sẽ đem cái chữ về cho dân làng.
+            Buổi đón tiếp thật giản dị mà cảm động. Ai cũng háo hức để được gặp cô giáo.
+            Mình rất yêu buôn Chư Lênh của mình.
+            Sau này, lớn lên, mình sẽ làm cô giáo để về buôn dạy cái chữ cho các bạn nhỏ của quê hương.
+        </p>
+    </div>
+    <script>
+        //Bài tập DOM
+
+        //Thây đổi màu chữ của 3 đoạn văn theo thứ tự :xanh, vàng ,đỏ
+        function changeColor() {
+            dv1.style.color = "green";
+            dv2.style.color = "yellow";
+            dv3.style.color = "red";
+        }
+
+        //Thay đổi màu nền trang
+        function changeBackground(color) {
+            document.body.style.background = color;
+        }
+
+        //tạo hàm copy đoạn văn 1 giống đoạn văn 2
+        function copyContent(para1, para2) {
+            if (para1 == "dv1" && para2 == "dv2") {
+                document.getElementById('dv1').innerText = document.getElementById('dv2').innerText;    
+            } 
+            if (para1 == "dv1" && para2 == "dv3") {
+                document.getElementById('dv1').innerText = document.getElementById('dv3').innerText;    
+            }
+            if (para1 == "dv2" && para2 == "dv1") {
+                document.getElementById('dv2').innerText = document.getElementById('dv1').innerText;    
+            }
+            if (para1 == "dv2" && para2 == "dv3") {
+                document.getElementById('dv2').innerText = document.getElementById('dv3').innerText;    
+            }
+            if (para1 == "dv3" && para2 == "dv1") {
+                document.getElementById('dv3').innerText = document.getElementById('dv1').innerText;    
+            }
+            if (para1 == "dv3" && para2 == "dv2") {
+                document.getElementById('dv3').innerText = document.getElementById('dv1').innerText;    
+            }   
+        }
+
+        //change fontsize
+        function changeFontSize(x) {
+            var j = window.getComputedStyle(document.getElementById("content")).fontSize;
+            var fontsize = parseInt(j);
+            var el = document.getElementsByClassName('paragrap');
+            var y = (fontsize+x) + "px";
+            document.getElementsById('content').fontSize = y;
+        }
+
+        //bai 5,6 
+        var min = 10;
+        var max = 30;
+        function increaseFontSize(para3) {
+            if (j<31) {
+                document.getElementById('para3').fontSize +=changeFontSize(1);
+            }
+        }
+        function decreaseFontSize(para4) {
+            if (j>9 && j<30) {
+                document.getElementById('para4').fontSize -=changeFontSize(1);
+            }
+        }
+    </script>
+</body>
+</html>
