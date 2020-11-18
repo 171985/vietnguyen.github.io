@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+      .body {
+        margin: 0;
+        padding: 0;
+        /* height: 100vh; */
+        width: 100%;
+        display: block;
+      }
+      .container,.container1 {
+        background-color: cadetblue;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .example{
+        height: 45vh;
+        width: 31%;
+        background-color: rgb(48, 48, 185);
+      }
+      .para1, .para2, .para3 {
+          margin-top: 15px;
+          margin-bottom: 15px;
+      }
+      .para4, .para5, .para6 {
+          margin-bottom: 15px;
+      }
+      .para2, .para5 {
+          margin-left: 15px;
+          margin-right: 15px;
+      }
+
+      .spaces {
+          width: 100%;
+          height: 30px;
+          background-color: burlywood;
+      }
+      .container1 {
+          background-color: burlywood;
+      }
+      .content-main {
+          width: 60%;
+          background-color: gold;
+          display: flex;
+          flex-wrap: wrap;
+      }
+      .example1{
+        height: 33vh;
+        width: 31.7%;
+        background-color: rgb(48, 48, 185);
+      }
+      
+      .para10, .para11, .para12 {
+          margin-top: 15px;
+          margin-bottom: 15px;
+      }
+      .para8, .para11, .para14 {
+          margin-right: 15px;
+          margin-left: 15px;
+      }
+      @media (max-width: 800px) {
+        .container, .container1 {
+          background-color: rgb(182, 128, 109);
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+        }
+        .example, .example1 {
+          height: 300px;
+          margin: 0 20px 15px 20px;
+          width: 100%;
+          background-color: rgb(48, 48, 185);
+        }
+        .para1 {
+          margin-top: 20px;
+          margin-bottom: 15px;
+        }
+        .container:last-child {
+          margin-bottom: 20px;
+        }
+
+        .spaces {
+            width: 100%;
+            height: 30px;
+            background-color: burlywood;
+        }
+
+
+        .content-main {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: burlywood;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="example para1"></div>
+      <div class="example para2"></div>
+      <div class="example para3"></div>
+      <div class="example para4"></div>
+      <div class="example para5"></div>
+      <div class="example para6"></div>
+    </div>
+    <div style="height: 50px"></div>
+    <h3>Bài 2</h3>
+    <div class="container1">
+      <div class="spaces"></div>
+        <div class="content-main">
+          <div class="example1 para7"></div>
+          <div class="example1 para8"></div>
+          <div class="example1 para9"></div>
+          <div class="example1 para10"></div>
+          <div class="example1 para11"></div>
+          <div class="example1 para12"></div>
+          <div class="example1 para13"></div>
+          <div class="example1 para14"></div>
+          <div class="example1 para15"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
