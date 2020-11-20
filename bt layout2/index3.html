@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .nav {
+      padding: 30px 15px 0 15px;
+      background-color: cyan;
+      height: 100vh;
+    }
+    .nav-left {
+      display: grid;
+      grid-template-columns: auto auto;
+      column-gap: 15px;
+      row-gap: 15px;
+      height: 50vh;
+      background-color: yellow;
+    }
+    .menu {
+      background-color: blue;
+    }
+    .nav-right{
+      background-color: blue;
+      margin-top: 20px;
+      height: calc(50vh - 20px);
+    }
+
+    @media (min-width: 576px){
+      .nav{
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+      }
+      .nav-left{
+        width: calc(200% / 3 - 7.5px);
+      }
+      .nav-right {
+        width: calc(100% / 3 - 15px);
+        margin-left: 20px;
+        margin-top: 0px;
+        height:100vh;
+      }
+      
+    }
+
+  </style>
+</head>
+<body>
+  <h3>bài 3</h3>
+  <div class="nav">
+    <div class="nav-left">
+      <div class="menu"></div>
+      <div class="menu"></div>
+      <div class="menu"></div>
+      <div class="menu"></div>
+    </div>
+    <div class="nav-right"></div>
+  </div>
+</body>
+</html>

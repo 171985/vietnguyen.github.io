@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .nav {
+            background-color: wheat;
+            width: 95%;
+            margin: 0 auto;
+        }
+        .nav-top{
+            display: grid;
+            grid-template-columns: 60px 60px 60px;
+            grid-template-rows: 50px;
+            /* column-gap: 50px; */
+            background-color: red;
+            height: 8vh;
+            justify-content: space-around;
+        }
+        .menu {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            background-color: blue;
+        }
+        .nav-down {
+            height: 90vh;
+            background-color: blue;
+        }
+        .block {
+            width: 100%;
+            height: 50%;
+            background-color: rebeccapurple;
+            margin-bottom: 10px;
+        }
+
+        @media (min-width: 768px){
+            .nav {
+                width: 100%;
+                /* padding-left: 15px;
+                padding-right: 15px; */
+            }
+            .nav-top {
+                position: relative;
+                display: flex;
+                flex-wrap: wrap;
+                height: 60px;
+                width: 100%;
+                justify-content:space-between;
+            }
+            .menu {
+                width: 90px;
+                height: 30px;
+                margin: 15px;
+            }
+            /* .menu:last-child{
+                position: absolute;
+                right: 0px;
+            } */
+            .nav-down {
+                display: flex;
+                flex-wrap: wrap;
+                margin: 15px 15px 0 15px;
+            }
+            .block {
+                width: calc(50% - 5px);
+            }
+            .block:first-child {
+                margin-right: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h3>Bài 5</h3>
+    <div class="nav">
+        <div class="nav-top">
+            <div class="menu"></div>
+            <div class="menu"></div>
+            <div class="menu"></div>
+        </div>
+        <div class="nav-down">
+            <div class="block"></div>
+            <div class="block"></div>
+        </div>
+    </div>
+</body>
+</html>
