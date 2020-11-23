@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .menu {
+            padding: 20px;
+            background-color: palegoldenrod;
+        }
+        #menu-row {
+            height: 160px;
+            display: none;
+        }
+        .menu-destop {
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            display: none;
+        }
+        .menu-mobile, #menu-row{
+            width: 100%;
+            /* background-color:rosybrown; */
+        }
+        .menu-bar {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 10px;
+            padding-top: 10px;
+            padding-left: 10px;
+            background-color:rgb(81, 81, 243);
+            /* text-align: center; */
+        }
+        img {
+            width: 120px;
+            height: 50px;
+            overflow: hidden;
+        }
+        a {
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            font-family:sans-serif;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: auto;
+            min-height: 40px;
+        }
+        li {
+            line-height: 40px;
+            text-align: center;
+            border: 1px solid black;
+            background-color: rgb(81, 81, 243);
+        }
+        li:hover {
+            background-color: rgb(28, 28, 209);
+        }
+        #main{
+            background-color:gray;
+            height: 90vh;
+        }
+        i {
+            width: 30px;
+            height: 30px;
+        }
+        .menu-right, .menu-row {
+            text-align: center;
+        }
+
+        @media(min-width: 576px){
+            .menu{
+                padding-bottom: 0;
+            }
+            .menu-mobile{
+                display: none;
+            }
+            .menu-destop{
+                display: flex;
+            }
+            .menu-right{
+                justify-content: center;
+                align-items: center;
+            }
+            ul{
+                display: flex;
+            }
+            li {
+                width: 100px;
+                border-right: none;
+            }
+            #main {
+                height: 90vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <div class="menu-destop"> 
+            <div class="logo">
+                <a href="#"> 
+                    <img src="http://marketingbox.vn/upload/image/%C4%90%E1%BA%B9p-%C4%90%E1%BB%99c-%C4%90%E1%BB%89nh/19-Logo-mat-trang/05-thiet-ke-logo-quan-cafe.jpg" alt="logo">
+                </a>
+            </div>
+            <div class="menu-right">
+                <ul>
+                    <li><a href="#">Menu1</a></li>
+                    <li><a href="#">Menu2</a></li>
+                    <li><a href="#">Menu3</a></li>
+                </ul>
+            </div> 
+        </div>
+        <div class="menu-mobile">
+            <div class="menu-bar"><i class="fa fa-bars" id="icon-bar" onclick="Click()" aria-hidden="true"></i><fa-4x></fa-2x></div>
+            <div id="menu-row">
+                <ul>
+                    <li><a href="#">Trang chủ</a></li>
+                    <li><a href="#">Menu1</a></li>
+                    <li><a href="#">Menu2</a></li>
+                    <li><a href="#">Menu3</a></li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <div id="main"></div>            
+        </div>
+    </div>
+    <script>
+        function Click() {
+            document.getElementById('menu-row').style.display = "block";
+            document.getElementById('main').style.marginTop = "20px";
+            document.getElementById('main').style.height = "73vh";
+        }
+    </script>
+</body>
+</html>
