@@ -14,7 +14,7 @@
             padding: 20px;
             background-color: palegoldenrod;
         }
-        #menu-row {
+        .menu-row {
             height: 160px;
             display: none;
         }
@@ -35,7 +35,12 @@
             padding-top: 10px;
             padding-left: 10px;
             background-color:rgb(81, 81, 243);
-            /* text-align: center; */
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+        .menu-bar:hover {
+            background-color:rgb(228, 117, 26);
         }
         img {
             width: 120px;
@@ -70,9 +75,14 @@
         i {
             width: 30px;
             height: 30px;
+            margin-top: 5px;
+            margin-right: 10px;
         }
         .menu-right, .menu-row {
             text-align: center;
+        }
+        .menu-row.responsive {
+            display: block;
         }
 
         @media(min-width: 576px){
@@ -120,7 +130,7 @@
         </div>
         <div class="menu-mobile">
             <div class="menu-bar"><i class="fa fa-bars" id="icon-bar" onclick="Click()" aria-hidden="true"></i><fa-4x></fa-2x></div>
-            <div id="menu-row">
+            <div id="menu-row" class="menu-row">
                 <ul>
                     <li><a href="#">Trang chủ</a></li>
                     <li><a href="#">Menu1</a></li>
@@ -135,7 +145,12 @@
     </div>
     <script>
         function Click() {
-            document.getElementById('menu-row').style.display = "block";
+            var x = document.getElementById("menu-row");
+            if (x.className === "menu-row") {
+                x.className += " responsive";
+            } else {
+            x.className = "menu-row";
+            }
             document.getElementById('main').style.marginTop = "20px";
             document.getElementById('main').style.height = "73vh";
         }
