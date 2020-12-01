@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <style>
+        *{
+            font-size: 14px;
+        }
+        body{
+          overflow: hidden;
+        }
+
+        .menu {
+            display: flex;
+            background-color: rgb(52, 70, 92);
+            /* /* text-align: center; */
+            justify-content: space-between;
+            align-items: center; 
+        }
+        .logo{
+            left: 20px;
+            padding-left: 20px;
+        }
+        .logo a img{
+           max-height: 30px;
+        }
+        .navbar {
+            background-color: rgb(52, 70, 92);
+            color: white;
+            right: 0px;
+        }
+        .navbar-toggler{
+          background-color: cornflowerblue;
+        }
+        .row-search{
+          display: flex;
+          justify-content: center;
+          border: 1px solid rgba(0, 0, 0, 0.25);
+          margin: 0;
+        }
+        .fa {
+          line-height: 30px;
+        }
+        p {
+          color: #464646;
+        }
+        ul li a{
+            color: white;
+        }
+        .form-search {
+          position: relative;
+          padding: 15px 10px;
+          display: block;
+          border: none;
+        }
+        .search-form label {
+          display: inline-block;
+          margin-bottom: 0.5rem;
+        }
+        .label-search{
+          position: absolute;
+          top: 50%;
+          color: #5e5e5e70;
+          transform: translateY(-50%);
+        }
+        .form-control {
+          border: none;
+          line-height: 2rem;
+          width:  calc(100% - 2.5rem);
+          padding-left: 2.5rem;
+        }
+        .col-10 {
+          border: none;
+        }
+        .btn-class{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .btn-search {
+          border: 2px solid rgba(0,0,0,.25);
+          color: rgba(48,73,97,.6);
+          border-radius: 4px;
+          font-size: .9rem;
+        }
+
+    </style>
+  </head>
+  <body>
+    <div class="menu">
+        <div class="logo">
+            <a href="#"><img src="https://techmaster.vn/resources/image/new_logo.png" alt="techmaster" title="Techmaster học là có việc"></a>
+         </div>
+         <div>
+        <nav class="navbar navbar-expand-lg">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false">
+                LỘ TRÌNH
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#">LẬP TRÌNH CĂN BẢN</a>
+                <a class="dropdown-item" href="#">FRONTEND + REACT</a>
+                <a class="dropdown-item" href="#">DI ĐỘNG REAL NATIVE</a>
+                <a class="dropdown-item" href="#">FULLTACK</a>
+                <a class="dropdown-item" href="#">LỘ TRÌNH DevOps</a>
+                <a class="dropdown-item" href="#">Sofware Testing</a>
+              </div>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">PHÒNG LAB <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">TRỰC TUYẾN</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">SẢN PHẨM HỌC VIÊN</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">KHAI GIẢNG</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">BLOG</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">TRẢI NGHIỆM</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">VIỆC LÀM</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                CHÚNG TÔI
+              </a>
+              <div
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <a class="dropdown-item" href="#">TRUNG TÂM</a>
+                <a class="dropdown-item" href="#">QUY ĐỊNH</a>
+                <a class="dropdown-item" href="#">GIẢNG VIÊN</a>
+                <a class="dropdown-item" href="#">HƯỚNG DẪN ĐĂNG KÝ HỌC</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+         </div>
+    </div>
+    <div>
+        <div class="container">
+          <div class="row row-search">
+            <div class="col-10">
+              <form  id="search-form" method="GET">
+                <div class="form-search">
+                  <label  class="label-search"><i class="fa fa-search" aria-hidden="true"></i></label>
+                  <input type="text" class="form-control" placeholder="Gõ từ khóa tìm kiếm ..." aria-describedby="basic-addon1">
+                </div>
+              </form>
+            </div>
+            <div class="col-2 btn-class">
+              <button class="btn btn-search"><span>Lọc danh sách</span></button>
+            </div>
+          </div
+            <div class="row">
+              <div class="col-xl-3 col-sm-4 col-md-6">
+                  <a href="#">
+                    <figure class="figure">
+                        <img src="https://techmaster.vn/media/static/bn95ibf0k7qnbj6f7lt0/buuvdbc51co41h2qd0q0" class="figure-img img-fluid rounded img-responsive" alt="Java Gelter">
+                        <figcaption class="figure-caption text-center">Java Gelter và Selter</figcaption>
+                      </figure>
+                      <p>Getter và setter được sử dụng rất phổ biến trong Java, 2 phương thức thoạt ...</p>
+                  </a>
+              </div>
+              <div class="col-xl-3 col-sm-4 col-md-6">
+                  <a href="#">
+                    <figure class="figure">
+                        <img src="https://techmaster.vn/media/static/8187/buukp5k51cofsqis997g" class="figure-img img-fluid rounded img-responsive" alt="...">
+                        <figcaption class="figure-caption text-center">
+                        10 kiểu người khó làm việc nhóm trong ngành IT
+                        </figcaption>
+                    </figure>
+                    <p>Làm việc nhóm tốt giúp công việc chung của cả team và bản thân trở lên hiệ...</p>
+                </a>
+            </div>
+              <div class="col-xl-3 col-sm-4 col-md-6">
+                  <a href="#">
+                  <figure class="figure">
+                <img src="https://techmaster.vn/media/static/bub3enc51co7s932dsk0/bur2tmk51co41h2qd0f0" class="figure-img img-fluid rounded img-responsive" alt="...">
+                <figcaption class="figure-caption text-center">
+                    Người mới bắt đầu có nên học Frontend hay không? 
+                </figcaption>
+                </figure>
+                <p>Dân ngoại đạo, chuyển sang ngành lập trình thì nên học gì cho ngư�...</p>
+                  </a>
+            </div>
+              <div class="col-xl-3 col-sm-4 col-md-6">
+                <a href="#">
+                    <figure class="figure">
+                <img src="https://techmaster.vn/media/static/8103/buudtsc51co41h2qd0ng" class="figure-img img-fluid rounded img-responsive" alt="...">
+                <figcaption class="figure-caption text-center">
+                    [CodeceptJS] Phần 1: CodeceptJS là gì? Cài đặt như thế nào?
+                </figcaption>
+                </figure>
+                <p>[CodeceptJS] Phần 1: CodeceptJS là gì? Cài đặt như thế nào?</p>
+                </a>
+              </div>
+                <div class="col-xl-3 col-sm-4 col-md-6">
+                    <a href="#">
+                        <figure class="figure">
+                    <img src="https://techmaster.vn/media/static/buqua2k51codbee0kio0/busa2is51co41h2qd0k0" class="figure-img img-fluid rounded img-responsive" alt="...">
+                <figcaption class="figure-caption text-center">
+                    Chương trình trải nghiệm văn hóa Nhật Bản dành cho TOP GUN
+                </figcaption>
+                </figure>
+                <p>Chương trình dành cho các bạn đạt điểm cao tại kỳ thi chuẩn kỹ sư CNTT Nh�...</p>
+                    </a>    
+            </div>
+                <div class="col-xl-3 col-sm-4 col-md-6">
+                    <a href="#">
+                        <figure class="figure">
+                    <img src="https://techmaster.vn/media/static/buqua2k51codbee0kio0/bur4n9c51cofsqis9930" class="figure-img img-fluid rounded img-responsive" alt="...">
+                <figcaption class="figure-caption text-center"></figcaption>
+                </figure>
+                <p>Giải đề thi chuẩn kỹ sư CNTT Nhật Bản mùa xuân 2019</p>
+                    </a>
+                </div>
+                <div class="col-xl-3 col-sm-4 col-md-6">
+                    <a href="#">
+                        <figure class="figure">
+                    <img src="https://techmaster.vn/media/static/buqua2k51codbee0kio0/bur2v7s51co41h2qd0h0" class="figure-img img-fluid rounded img-responsive" alt="...">
+                <figcaption class="figure-caption text-center">
+                    Giải đề thi mùa xuân chứng chỉ chuẩn kỹ sư CNTT Nhật Bản 
+                </figcaption>
+                </figure>
+                <p>Chứng minh năng lực bản thân bằng chứng chỉ chuẩn kỹ sư CNTT - FE (Fundamental...</p>
+                    </a>
+                </div>
+                <div class="col-xl-3 col-sm-4 col-md-6">
+                    <a href="#">
+                        <figure class="figure">
+                    <img src="https://techmaster.vn/media/static/buqua2k51codbee0kio0/bur324s51co41h2qd0i0" class="figure-img img-fluid rounded img-responsive" alt="...">
+                <figcaption class="figure-caption text-center">
+                    Chuyên nghiệp hơn bằng chứng chỉ chuẩn kỹ sư CNTT Nhật Bản (FE)
+                </figcaption>
+                </figure>
+                <p>Chứng chỉ FE (Fundamentals of Engineering Certification) là chứng chỉ CNTT được xây...</p>
+                <a href="#">
+                    <figure class="figure">
+                </div>
+            </div>
+          </div>
+    </div>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+      crossorigin="anonymous"
+    />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+  </body>
+</html>
