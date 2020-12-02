@@ -331,7 +331,7 @@
   /* Footer */
   
   .main-footer {
-    max-height: 100px;
+    max-height: 300px;
     background-color: #F0F0F0;
   }
   
@@ -739,7 +739,7 @@
   
     /* Newsletter */
     .newsletter-form__email {
-      width: 35%;
+      width: 100%;
     }
 
                           /* SINGLE POST PAGE */
@@ -779,7 +779,7 @@
   
     /* Newsletter */
     .newsletter-form__email {
-      width: 45%;
+      width: 100%;
     }
 
                           /* SINGLE POST PAGE */
@@ -835,7 +835,7 @@
   
     /* Newsletter */
     .newsletter-form__email {
-      width: 40%;
+      width: 100%;
     }
 
                           /* SINGLE POST PAGE */
@@ -878,7 +878,7 @@
   
     /* Newsletter */
     .newsletter-form__email {
-      width: 45%;
+      width: 100%;
     }
   }
   
@@ -962,7 +962,7 @@
   
     /* Newsletter */
     .newsletter-form__email {
-      width: 50%;
+      width: 100%;
     }
     
   }
@@ -990,7 +990,7 @@
   
     /* Newsletter */
     .newsletter-form__email {
-      width: 60%;
+      width: 100%;
     }
     
   }
@@ -1059,7 +1059,7 @@
       font-size: 1.5em;
     }
     .newsletter-form__email {
-      width: 80%;
+      width: 100%;
     }
   
     /* Footer */
@@ -1109,7 +1109,7 @@
   
     /* Newsletter */
     .newsletter-form__email {
-      width: 80%;
+      width: 100%;
     } 
 
     .main-footer-content {
