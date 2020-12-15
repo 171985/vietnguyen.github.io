@@ -21,6 +21,7 @@ body {
 ul {
   display: flex;
   list-style-type: none;
+  margin-bottom: 0;
 }
 
 li {
@@ -39,9 +40,7 @@ a:hover {
 /* header */
 
 .header {
-  /* width: 100%; */
   height: 49.375rem;
-  /* height: auto; */
   background: url(../test-cat-html-css/image/banner.jpg) repeat-x;
   position: relative;
   display: flex;
@@ -49,10 +48,11 @@ a:hover {
 }
 
 .logo {
-  padding-left: 3.75rem;
+  padding-left:3.75rem;
   display: flex;
   text-align: center;
   align-items: center;
+  /* margin-top: 15px; */
 }
 
 .logo a {
@@ -70,25 +70,30 @@ a:hover {
   display: flex;
   position: absolute;
   justify-content: space-between;
-  /* align-items: center; */
-  /* top: 5%;
-  left: 0%; */
-  /* margin-bottom: 20px; */
+
 }
 
 .menu-right {
-  /* padding-right: 3rem; */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.menu-right .navbar {
+  display:block;
+}
+
+.navbar-toggler {
+  padding:0;
+}
+
 .navbar-toggler-icon {
-  border: 1px solid #deff06;
+  border: 1px solid #757575;
+  background-color: #757575;
   color: white;
+  margin-right: 60px;
   width: 60px;
   text-align: center;
-  /* background-color: #deff06; */
   font-family: var(--first-font);
   font-size: 1rem;
   font-weight: 400;
@@ -104,15 +109,11 @@ a:hover {
 li a:hover {
   background-color: #deff06;
   color: #757575;
-  /* text-decoration: none; */
 }
 
 .logo a:hover {
   background-color: #deff06;
   color: #757575;
-  font-size: 1.3rem;
-  /* text-decoration: none; */
-  padding: 5px 10px;
 }
 
 .menu-right a {
@@ -127,90 +128,21 @@ li a:hover {
 /* .main-content */
 
 .main-content {
-  /* max-width: 42.5rem; */
   position: absolute;
   display: block;
+  min-width: 680px;
   justify-content: center;
   top: 55%;
   left: 50%;
-  transform: translate(-50%, -40%);
+  transform: translate(-50%, -50%);
   margin: 0 auto;
 }
 
-.font-large {
-  color: white;
-  font-size: 3.375rem;
-  font-weight: 500;
-  line-height: 5rem;
-  font-family: var(--first-font);
-  letter-spacing: 1.12px;
-  text-shadow: 0px 10px 30px rgba(0, 0, 0, 0.151183);
-  margin: 0 auto;
-  text-align: center;
+.text-bold {
+  font-weight: 700;
+  letter-spacing: 0.12px;
 }
-
-.font-normal {
-  /* width: 82%; */
-  color: white;
-  font-size: 1.25rem;
-  font-weight: 500;
-  line-height: 1.875rem;
-  font-family: var(--first-font);
-  text-align: center;
-  mix-blend-mode: normal;
-  opacity: 0.91;
-  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.0910043);
-  margin: 0 auto;
-  margin-bottom: 18px;
-}
-
-.input-group {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  justify-content: center;
-  text-align: center;
-  filter: drop-shadow(0px 20px 50px rgba(0, 0, 0, 0.14));
-  margin: 0 auto;
-}
-
-.input-group .form-control {
-  width: 100%;
-  font-family: var(--first-font);
-  font-style: normal;
-  font-weight: normal;
-  font-size: 13px;
-  line-height: 19px;
-  border: none;
-  border-right: 1px solid black;
-  padding-left: 1.25rem;
-  padding-top: 1.125rem;
-  padding-bottom: 1.125rem;
-  letter-spacing: 0.0509971px;
-  color: #757575;
-  /* margin-right: -1px; */
-}
-
-.input-group-append {
-  width: 100%;
-}
-
-.input-group-append .btn {
-  background: #deff06;
-  border: none;
-  font-family: var(--first-font);
-  font-style: normal;
-  font-weight: normal;
-  font-size: 13px;
-  line-height: 19px;
-  letter-spacing: 0.0509971px;
-  color: #757575;
-}
-
-.btn:hover {
-  background-color: #b7f709;
-  font-size: 14px;
-}
-
+ 
 .logo-main-content {
   text-align: center;
   justify-content: center;
@@ -240,20 +172,26 @@ img {
 .section-two {
   text-align: center;
   justify-content: center;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
 .content-tag {
   font-family: "Poppins";
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.875rem;
   line-height: 2.8125rem;
   text-align: center;
-  letter-spacing: 0.0647271px;
+  letter-spacing: 0.065px;
   color: #000000;
   mix-blend-mode: normal;
   opacity: 0.8;
   text-shadow: 0px 10px 30px rgba(0, 0, 0, 0.0212013);
+}
+
+.content-tag__text-bold {
+  font-weight: 700;
 }
 
 .content-detail {
@@ -297,16 +235,16 @@ img {
   /* line-height: 45px; */
   text-align: center;
   align-items: center;
-  background: url(image/price\ tag.png);
+  background: url(image/pricetag1.png) no-repeat;
   position: absolute;
   top: 10%;
-  right: -2%;
+  right: -8px;
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 600;
   font-size: 15px;
   line-height: 35px;
-  letter-spacing: 0.0323635px;
+  letter-spacing: 0.03px;
 }
 
 .background-img {
@@ -315,16 +253,15 @@ img {
   /* overflow: hidden; */
 }
 
-.background-img:hover img{
-  transform: scale(1.05);
-  /* overflow: hidden; */
-}
-.background-img:hover .price {
-  color: #000000;
+.imag-over-flow {
+  overflow: hidden;
 }
 
-.margintop {
-  margin-top: 20px;
+.background-img:hover img{
+  transform: scale(1.2);
+}
+.background-img:hover .price {
+  color: #deff06;
 }
 
 .section-one .background-img img {
@@ -339,7 +276,7 @@ img {
   font-size: 15px;
   line-height: 22px;
   text-align: center;
-  letter-spacing: 0.059748px;
+  letter-spacing: 0.06px;
   color: #ffffff;
   padding: 20px 23.5px;
   border: none;
@@ -352,7 +289,7 @@ img {
 .button-more:hover {
   background-color: #deff06;
   color: #757575;
-  font-size: 14px;
+  /* font-size: 14px; */
 }
 .name {
   margin-top: 7px;
@@ -362,7 +299,7 @@ img {
   font-size: 24px;
   line-height: 36px;
   text-align: center;
-  letter-spacing: 0.0517816px;
+  letter-spacing: 0.05px;
   color: #000000;
   mix-blend-mode: normal;
   opacity: 0.8;
@@ -371,8 +308,6 @@ img {
 
 .name:hover {
   background-color: #deff06;
-  font-size: 20px;
-  /* text-decoration: none; */
 }
 /* .section-two */
 
@@ -380,9 +315,11 @@ img {
   font-weight: 700;
 }
 
-.product {
+.margintop {
+  margin-top: 20px;
   position: relative;
 }
+
 
 .detail {
   position: absolute;
@@ -396,7 +333,7 @@ img {
   font-size: 24px;
   line-height: 36px;
   text-align: center;
-  letter-spacing: 0.0517816px;
+  letter-spacing: 0.05px;
   color: #ffffff;
   text-shadow: 0px 10px 30px rgba(0, 0, 0, 0.443699);
 }
@@ -417,11 +354,11 @@ img {
 .font40 {
   font-family: "Poppins";
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 40px;
   line-height: 60px;
   text-align: center;
-  letter-spacing: 0.0863027px;
+  letter-spacing: 0.09px;
   color: #ffffff;
   mix-blend-mode: normal;
   opacity: 0.8;
@@ -445,59 +382,76 @@ img {
   text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.381284);
 }
 
+.opacity09 {
+  opacity: 0.91;
+}
+
+.padding-left-13 {
+  padding:0 13px;
+}
+
 .sign-up-me {
   display: flex;
+  width: 95%;
+  max-width: 590px;
+  margin: auto;
   justify-content: center;
   filter: drop-shadow(0px 20px 50px rgba(0, 0, 0, 0.14));
 }
 
-#email-input,
-#sign-up-button {
+.email {
+  width: calc(100% - 140px);
+  color: #ffffff;
+}
+.postcart {
+  width: 140px;
+}
+
+.email-input,
+.sign-up-button {
   border: none;
 }
 
-#sign-up-button {
+.sign-up-button {
   font-family: "Poppins";
   font-style: normal;
   font-weight: normal;
   font-size: 13px;
   line-height: 19px;
-  letter-spacing: 0.0509971px;
+  width: 140px;
+  letter-spacing: 0.05px;
   color: #757575;
-  padding: 18px 30px;
-  padding-top: 18px;
-  padding-bottom: 18px;
+  padding: 18px 20px;
   text-align: center;
   justify-content: center;
   align-items: center;
   background-color: #deff06;
+  display: block;
+  flex-wrap: nowrap;
 }
 
-#sign-up-button:hover {
+.signup {
+  margin: auto;
+}
+.sign-up-button:hover {
   background-color: #b7f709;
-  font-size: 14px;
+  /* font-size: 14px; */
 }
 
-#email-input {
+.email-input, .postcart-input {
   font-family: "Poppins";
   font-style: normal;
   font-weight: normal;
   font-size: 13px;
   line-height: 19px;
-  width: 300px;
-  letter-spacing: 0.0509971px;
+  width: 100%;
+  letter-spacing: 0.05px;
   color: #757575;
-  padding-top: 18px;
-  padding-bottom: 18px;
-  padding-left: 24px;
-  padding-right: 10px;
+  padding: 18px 5px 18px 20px;
   background-color: white;
+  border: none;
 }
 
-.Enter-mail {
-  display: grid;
-  grid-template-columns: 4fr 1fr;
-}
 /* footer */
 .menu-footer {
   display: flex;
@@ -509,15 +463,38 @@ img {
 
 .footer-menu-right {
   padding-right: 40px;
+  display: flex;
+  align-items: center;
 }
 
-.footer-menu-right a:hover {
-  padding: 5px 10px;
+.footer-menu-right ul {
+  display: inline-flex;
+  height: 100%;
+  align-items: center;
 }
 
-@media (max-width: 990px) {
+.find-my-car .email {
+  width: calc(100% - 280px);
+  background-color: #ffffff;
+}
+
+
+@media (max-width:900px) and (min-width:780){
+
   .navbar-nav .nav-link {
     padding: 0.1rem 0.1rem;
+  }
+
+  .main-content {
+    top: 50%;
+    left: 40%;
+    right: 0;
+    max-width: 680px;
+    /* right: 0; */
+  }
+
+  .sign-up-button {
+    padding: 18px 18px;
   }
 
   .detail {
@@ -532,7 +509,37 @@ img {
 /* man hinh tablet */
 @media (max-width: 780px) {
   .main-content {
+    max-width: 680px;
     top: 50%;
+    /* left: 35%; */
+    right: 0;
+  }
+
+  .find-my-car {
+    display: block;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .email {
+    margin:5px auto;
+  }
+
+  .postcart {
+    margin:5px auto;
+  }
+
+
+  .email-input {
+    width: 100%;
+    text-align: center;
+  }
+  .postcart-input {
+    text-align: center;
+  }
+
+  .sign-up-button {
+    margin: auto;
   }
   
   .font-large {
@@ -545,8 +552,8 @@ img {
     line-height: 1.5em;
   }
 
-  #search-input,
-  #postcode-input {
+  .search-input,
+  .postcode-input {
     padding-left: 1rem;
   }
 
@@ -585,10 +592,13 @@ img {
 
   .menu-footer {
     display: block;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
   }
 
-  .logo {
-    padding-top: 20px;
+  div .logo {
+    padding:20px 0 0 0;
     justify-content: center;
     text-align: center;
   }
@@ -603,6 +613,10 @@ img {
 
   .main-content {
     max-width: 100%;
+    left: 0;
+    right: 0;
+    transform: translate(0, -40%);
+    display: block;
   }
 
   .button-more {
@@ -619,15 +633,18 @@ img {
     margin-top: 40px;
   }
 
-  #email-input {
+  .sign-up-me {
+    display: block;
+  }
+  /* .email-input {
     max-width: 200px;
     padding: 8px 10px;
-  }
+  } */
 
-  #sign-up-button {
+  /* .sign-up-button {
     padding: 8px 12px;
-  }
-}
+  } */
+} 
 
 @media (max-width: 320px) {
   .sign-up-me {
