@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Bai 10: Sử dụng lệnh trong javascript</title>
+<meta name="description" content="Bai 10:   Sử dụng lệnh trong javascript, Sử dụng lệnh trong javascript, Sử dụng lệnh trong javascript, Sử dụng lệnh trong javascript" >
+</head>
+
+<body>
+<h1 align="center">Bai 10:  Sử dụng lệnh trong javascript</h1>
+<p onMouseMove="laygiatri();" style=" width:50%;background-color:green; color:white;">Doạn văn 1</p>
+<p id="doan2">Dữ liệu đoạn 2</p>
+<img src="images/hinh2.png" width="300" onMouseMove="this.src='images/hinh1.png'" onMouseOut="this.src='images/hinh2.png'" >
+
+<form id="form1" name="form1" method="post" action="">
+    <label for="test">Nhập giá trị</label>
+    <input type="text" name="test" id="test">
+    <input type="button" name="check" id="check" value="Button" onClick="lay_giatri()">
+
+  <!-- bài tập 4 -->
+  <h2>BT 4: Tạo form nhập vào 2 giá trị và tính tổng giá trị</h2>
+
+    <table border="1" align="center" width="600" style="text-align:center">
+        <tr>
+            <td width="200" height="35">
+                <label for="soa">Nhập số a</label>
+            </td>
+            <td width="400">
+            <input type="text" name="soa" id="soa">
+            </td>
+        </tr>
+        <tr>
+            <td  height="35">
+            <label for="sob">Nhập số b</label>
+            </td>
+            <td>
+            <input type="text" name="sob" id="sob">
+             </td>
+        </tr>
+         <tr>
+            <td  height="35">
+            <label for="ketqua">Kết quả</label>
+             </td>
+            <td>
+            <input disabled type="text" name="ketqua" id="ketqua">
+             </td>
+        </tr>
+         <tr>
+             <td colspan="2"  height="35">
+                <input type="button" name="tinhtong" id="tinhtong" value="Tính tổng" onClick="fc_tinhtong(soa.value,document.getElementById('sob').value)">
+            </td>
+         </tr>
+    </table>
+
+     <!-- bài tập 5 -->
+  <h2>BT 5: Tạo 1 form tìm kiếm khi người dùng click chuật vào chữ 'tìm kiếm' biến mất, khi click ra ngoài ô, hiển thị lại chữ 'tìm kiếm'</h2>
+
+    <input type="text" name="tbtimkiem" id="tbtimkiem" value="Tìm kiếm" onClick="matchu()" onBlur="hienchu()" >
+
+    <input type="button" name="bttimkiem" id="bttimkiem" value="Tìm" >
+</form>
+
+<script type="text/javascript">
+
+    function laygiatri(a)
+    {
+        return alert(document.getElementById("doan2").innerHTML);
+    }
+    function lay_giatri()
+    {
+        alert(document.form1.test.value);
+    }
+    //tinh tong 2 giá trị nhập vào
+    function fc_tinhtong(a,b)
+    {
+        document.getElementById("ketqua").value=(parseInt(a)+parseInt(b));
+    }
+    function matchu()
+    {
+        if(document.getElementById("tbtimkiem").value=="Tìm kiếm")
+        {
+            document.getElementById("tbtimkiem").value="";
+        }
+    }
+    function hienchu()
+    {
+        if(document.getElementById("tbtimkiem").value=="")
+        {
+            document.getElementById("tbtimkiem").value="Tìm kiếm";
+        }
+    }
+</script>
+
+
+</body>
+</html>
