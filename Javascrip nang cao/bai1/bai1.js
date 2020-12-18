@@ -18,8 +18,8 @@ function Total(a, b) {
       total += i;
     }
   }
-  // return total;
-  document.getElementById("total").value = total;
+  return total;
+//   document.getElementById("total").value = total;
 }
 
 // Bài 2: Cho 1 số nguyên dương, viết hàm tính tổng tất cả các ước số của số đó.
