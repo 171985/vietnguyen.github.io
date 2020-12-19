@@ -1,8 +1,3 @@
-function Total(a,b) {
-    // let numberOne = document.getElementById('number-one').value;
-    // let numberTwo = document.getElementById('number-two').value;
-    let total = 0;
-    if (a < b) {
 function Total(a, b) {
   // let numberOne = document.getElementById('number-one').value;
   // let numberTwo = document.getElementById('number-two').value;
