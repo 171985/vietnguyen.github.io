@@ -9,23 +9,25 @@ function arMax(arr1) {
             newArr1.push(newArr[i]);
         }
     } 
-    console.log(newArr1);   
+    return newArr1;   
 }
 
 // Bài 2: Viết hàm so sánh mảng, truyền vào 2 mảng bất kỳ (chỉ chứa số nguyên), 
 // kết quả trả về là 1 mảng chỉ chứa những phần tử không đồng thời nằm trong 2 mảng truyền vào
-function compareTwoArr(arr1, arr2) {
-    
-    for (let i = 0; i < arr1.length; i++) {
-        for (let j = 0; j < arr2.length; j++) {
-            if (arr1[i] == arr2[j]) {
-                arr1.splice(i,1);
-                arr2.splice(j,1);
-            }
+
+function comTwoArray(firstArray, secondArray) {
+    let newArray=[];
+    for (let i = 0; i < firstArray.length; i++) {
+        if (secondArray.indexOf(firstArray[i])==-1) {
+            newArray.push(firstArray[i]);
         }
     }
-    var arr3 = arr1.concat(arr2); 
-    return arr3;
+    for (let j = 0; j < secondArray.length; j++) {
+        if (firstArray.indexOf(secondArray[j])==-1) {
+            newArray.push(secondArray[j]);
+        }
+    }
+    return newArray;
 }
 
 //Bài 3: Cho 2 số nguyên dương m và n. Tạo ra 1 mảng 2 chiều m x n là các số nguyên liên tiếp (tính từ 1) theo kiểu ziczac 
@@ -63,7 +65,7 @@ function averageAge(arr) {
         total+= arr[i].age;
     }
     ave = total / (arr.length);
-    console.log(ave);
+    return ave;
 }
 
 
@@ -75,12 +77,18 @@ function sortAge(arr1) {
 //Bài 6  Viết hàm sắp xếp lại mảng trên theo tên học viên (không phân biệt hoa thường).
 
 function sortName(arr2) {
-    return arr2.sort(function(a, b){return a.name.toLowerCase() - b.name.toLowerCase()});
+    return arr1.sort(function(a, b){
+        var x = a.name.toLowerCase();
+        var y = b.name.toLowerCase();
+        if (x < y) {return -1;}
+        if (x > y) {return 1;}
+        return 0;
+    });
 }
 
 //Bai 7 Viết hàm lọc ra những sinh viên nào có tên bắt đầu bằng chữ ''H'' hoặc ''h''.
 function findFirstName(arr3) {
     let newArr;
-    newArr = arr3.filter(str=>str.substr(0,1) == "H" || str.substr(0,1) == "h");
+    newArr = arr3.filter(str=>str.name.substr(0,1) == "H" || str.name.substr(0,1) == "h");
     return newArr;
 }
