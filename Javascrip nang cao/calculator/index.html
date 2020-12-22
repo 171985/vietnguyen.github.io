@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .textview {
+            width: 265px;
+            height: 40px;
+            font-size: 20px;
+            margin-top: 5px;
+            margin-left: 5px;
+            margin-bottom: 3px;
+            /* margin: auto; */
+            padding: 5px;
+            border: 1px solid rgb(36, 41, 49);
+            border-radius: 7px;
+            background-color: white;
+        }
+        .main {
+            width: 290px;
+            height: 487px;
+            background-color: rgb(255, 255, 255);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border: 2px solid rgb(15, 15, 15);
+            border-radius: 5px;
+            transform: translateX(-50%) translateY(-50%);
+        }
+
+        .main.change-theme {
+        background-image: linear-gradient(45deg, #b3ffff, #ffcccc);
+        border: 2px solid black;
+        /* padding: 9px 12px 17px; */
+        }
+
+        .change_theme {
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: 700;
+            color:rgb(201, 48, 44);
+            margin-top: 30px;
+        }
+
+        .change_theme:hover {
+            color: rgb(68, 157, 68);
+            /* margin-top: 30px; */
+        }
+
+        .button {
+            width: 60px;
+            height: 60px;
+            font-size: 20px;
+            margin: 5px;
+            cursor: pointer;
+            border: none;
+            border-radius: 50%;
+        }
+
+        .number {
+            background-color: hsl(208, 56%, 46%);
+            font-weight:500;
+            color: rgb(255, 255, 255);
+        }
+
+        .symbol {
+            background-color: rgb(217, 83, 79);
+            color: rgb(255, 255, 255);
+        }
+
+        .green {
+            background-color: rgb(92, 184, 92);
+        }
+
+        .green:hover {
+            background-color: rgb(68, 157, 68);
+        }
+
+        .gray:hover {
+            background-color: rgb(40, 96, 144);
+        }
+
+        .blue:hover {
+            background-color: rgb(201, 48, 44);
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <form name="myForm">
+            <input type="text" class="textview" id="display" disabled placeholder="0">
+        </form>
+        <table>
+            <tr>
+                <td><input type="button" class="button blue symbol" onclick="SR('r')" id="r" value="&radic;x" ></td>
+                <td><input type="button" class="button blue symbol" onclick="SR('s')" id="s" value="x&sup2;" ></td>
+                <td><input type="button" id="back" class="button blue symbol" onclick="back()" value="CE"></td>
+                <td><input type="button" class="button blue symbol op" onclick="insertOp('/')" value="&divide;"></td>
+            </tr>
+            <tr>
+                <td><input type="button" class="button gray number" onclick="insertNum(7)" value="7"></td>
+                <td><input type="button" class="button gray number" onclick="insertNum(8)" value="8"></td>
+                <td><input type="button" class="button gray number" onclick="insertNum(9)" value="9"></td>
+                <td><input type="button" class="button blue symbol op" onclick="insertOp('*')" value="&times;"></td>
+            </tr>
+            <tr>
+                <td><input type="button" class="button gray number" onclick="insertNum(4)" value="4"></td>
+                <td><input type="button" class="button gray number" onclick="insertNum(5)" value="5"></td>
+                <td><input type="button" class="button gray number" onclick="insertNum(6)" value="6"></td>
+                <td><input type="button" class="button blue symbol op" onclick="insertOp('-')" value="-"></td>
+            </tr>
+            <tr>
+                <td><input type="button" class="button gray number" onclick="insertNum(1)" value="1"></td>
+                <td><input type="button" class="button gray number" onclick="insertNum(2)" value="2"></td>
+                <td><input type="button" class="button gray number" onclick="insertNum(3)" value="3"></td>
+                <td><input type="button" class="button blue symbol op" onclick="insertOp('+')" value="+"></td>
+            </tr>
+            <tr>
+                <td><input type="button" class="button blue symbol sr" onclick="SR('t')" value="x&sup3;"></td>
+                <td><input type="button" class="button blue symbol sr" onclick="SR('1/x')" value="1/x"></td>
+                <td><input type="button" class="button blue symbol sr" onclick="SR('!')" value="!"></td>
+                <td><input type="button" class="button blue symbol sr" onclick="SR('%')" value="%"></td>
+            </tr>
+            <tr>
+                <td><input type="button" id="clean" class="button blue symbol" onclick="clean()" value="C"></td>
+                <td><input type="button" class="button gray number" onclick="insertNum(0)" value="0"></td>
+                <td><input type="button" id="dec" class="button gray number" onclick="insertDec()" value="."></td>
+                <td><input type="button" id="equal" class="button green symbol" onclick="equalTo()" value="="></td>
+            </tr>
+        </table>
+        <div class="change_theme">
+            <span onclick="change_theme()" class="change_theme">Change Theme</span>
+        </div>
+    </div>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script>
+        $(document).ready(function (){
+            $(".symbol").attr("disable","true");
+            $(".texview").attr("disable","true");
+        });
+
+        var exp = "", number, decimal, equal, operator;
+        // var textview = document.getElementById('display');
+        var textview = document.querySelector("#display");
+
+        function insertNum(num) {
+            if (equal) {
+                exp = num;
+                textview.value = exp;
+                number = true;
+                equal = false;
+            } else{
+                exp = textview.value + num;
+                textview.value = exp;
+                number = true;
+            }
+            if (operator) decimal = false;
+            // SR('a'); 
+        }
+
+        
+        // function equalTo() {
+        //     if (exp) {
+        //         exp = eval(exp);
+        //         textview.value = exp;
+        //         equal = true;
+        //         decimal = false;
+        //         operator = false;
+        //     }
+        // }
+
+        $("#equal").on("click", function (){
+            if (exp) {
+                exp = eval(exp);
+                textview.value = exp;
+                equal = true;
+                decimal = false;
+                operator = false;
+            }
+        });        
+
+        // function clean() {
+        //     exp = "";
+        //     textview.value = exp;
+        //     decimal = false;
+        // }
+
+        $("#clean").on("click", function (){
+            exp = "";
+            textview.value = exp;
+            decimal = false;
+        });
+
+        // function back() {
+        //     exp = textview.value;
+        //     exp = exp.substring(0, exp.length-1);
+        //     textview.value = exp;
+        // }
+
+        $("#back").on("click", function (){
+            exp = textview.value;
+            exp = exp.substring(0, exp.length-1);
+            textview.value = exp;
+        });
+
+        function insertOp(op) {
+            textview.value = exp + op;
+            operator = true;
+            equal = false;
+        }
+
+        // function insertDec() {
+        //     if (number && !decimal) {
+        //         textview.value = exp + '.';
+        //         decimal = true;
+        //         operator = false;
+        //     }
+        // }
+
+        $("#dec").on("click", function (){
+            if (number && !decimal) {
+                textview.value = exp + '.';
+                decimal = true;
+                operator = false;
+            }
+        });
+
+        function SR(y) {
+            if (y == 'r') {
+                exp = Math.sqrt(exp);
+                textview.value = exp;
+            }else if (y == 's') {
+                exp = exp * exp;
+                textview.value = exp;
+            }else if (y == 't') {
+                exp = Math.pow(exp,3);
+                textview.value = exp;
+            } else if (y == '%') {
+                exp = exp/100;
+                textview.value = exp;
+            }
+            else if (y =='!') {
+                exp = textview.value;
+                for (let i = 1; i < textview.value;i++){
+                exp = exp*i;
+                }
+                textview.value = exp;
+            }
+            else if (y=='1/x') {
+                exp = 1/exp;
+                textview.value = exp;
+            }
+        }
+
+        //Change Theme:
+      function change_theme() {
+        document.querySelector(".main").classList.toggle("change-theme");
+      }
+    </script>
+</body>
+</html>
