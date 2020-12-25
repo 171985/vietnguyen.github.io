@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+    font-family: Helvetica, Arial,  sans-serif;
+}
+
+.container {
+    padding: 50px;
+    width: 100%;
+}
+
+.container__theme {
+    text-align: center;
+}
+
+h1 {
+    font-size: 35px;
+    color: rgb(68, 67, 67);
+}
+
+a {
+    text-decoration: none;
+}
+
+table {
+    width: 100%;
+    border: none;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    font-weight: 600;
+    font-size: 13px;
+    /* color: rgb(68, 67, 67); */
+}
+
+td {
+    color: rgb(105, 103, 103);
+    font-weight: 500;
+}
+
+/* Thêm học viên */
+.add_hv {
+    text-align: left;
+    margin-bottom: 10px;
+    
+}
+
+.add_hv-button {
+    background-color: rgb(6, 168, 6);
+    padding: 10px 15px;
+    color: #ffffff;
+    border-radius: 3px;
+    border: none;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.add_hv-button:hover, .add_hv-button:active {
+    background-color: rgb(4, 122, 4);
+}
+
+.add_hv-link {
+    color: white;
+    font-weight: 400;
+}
+
+.add_hv-button-icon {
+    /* background-color: white; */
+    border-radius: 50%;
+    color: white;
+}
+
+.title {
+    background-color:rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: left;
+    /* padding: 50px 10px; */
+}
+
+.detail:nth-of-type(even){
+    background-color: rgb(243, 239, 239) ;
+}
+
+/* Sửa,xóa */
+.edit_del {
+    display: flex;
+}
+
+.edit {
+    color:rgb(10, 213, 240);
+    font-weight: 600;
+}
+
+.edit:active, .edit:hover {
+    color: rgb(10, 172, 172);
+    text-decoration:underline;
+}
+
+
+.delete {
+    color: rgb(247, 119, 119);
+}
+
+.delete:hover, .delete:active {
+    text-decoration: underline;
+    color: rgb(248, 12, 12);
+}
+
+.space {
+    width: 1px;
+    /* height: 20px; */
+    max-height: 14px;
+    background-color: rgb(165, 161, 161);
+    margin: 0 5px;
+}
+
+/* trang thêm,xóa hv */
+
+/* .padding50px {
+    /* padding: 50px; */
+/* } */ 
+
+.name, .birthday, .email, .phone {
+    width: 100%;
+    margin: 10px 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.name {
+    margin-top: 30px;
+}
+
+.name-input, .email-input,
+.birthday-input, .phone-input {
+    width: calc(100% - 50px);
+    height: 30px;
+    border-radius: 3px;
+    border: 1px solid #cccccc;
+    padding: 0 10px;
+}
+
+.labels {
+    min-width: 100px ;
+    font-weight: 600;
+    color:rgb(53, 51, 51);
+}
+
+.red {
+    color: rgb(248, 12, 12);
+    font-weight: 300;
+    font-size: 6px;
+    position: absolute;
+    padding-left: 3px;
+    top: 40%;
+    transform: translateY(-40%);
+}
+
+.backsave {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.back {
+    padding: 5px 15px 7px 15px;
+    border-radius: 5px;
+    background-color: gray;
+    border: none;
+    margin-right: 5px;
+    color: #eeeeee;
+    font-weight: 500;
+    text-align: center;
+    /* display: flex;     */
+    align-items: center;
+}
+
+.back:hover, .back:active {
+    background-color: rgb(99, 96, 96);
+}
+
+.backsave-link {
+    color: white;
+}
+
+.backsave-link:hover, .backsave-link:active {
+    color: white;
+}
+
+.save {
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: rgb(16, 156, 16);
+    border: none;
+    color: #eeeeee;
+    text-align: center;
+}
+
+.save:hover, .save:active {
+    background-color: rgb(16, 139, 16);
+}
