@@ -30,7 +30,7 @@ $.ajax({
                         </div>
                         <div class="space"></div>
                         <div>
-                            <button class="delete" onclick='del'>
+                            <button class="delete" onclick="del(${data[i].id})">
                                 <i class="fa fa-trash" aria-hidden="true"></i>
                                 Xóa
                             </button>
@@ -40,22 +40,15 @@ $.ajax({
                 <br/>`;
     }
     $("#table").html(content);
-
+});
     //delete users
-    $('.delete').on('click',function(){
+    function del(id){
         $.ajax({
             method: "DELETE",
-            url: "http://vietnguyen.herokuapp.com/users",
-            data: {
-                
-            }
-          })
-        $('table tr').on("click", function(){
-            $(this).remove();
-        });
-    })
-});
-
-
-
-
+            url: `http://vietnguyen.herokuapp.com/users/${id}`,
+        })
+            .done(function(){
+                $('this').remove();
+                location.href = "index.html";
+            })
+    }

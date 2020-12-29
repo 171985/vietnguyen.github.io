@@ -215,3 +215,10 @@ td {
 .save:hover, .save:active {
     background-color: rgb(16, 139, 16);
 }
+
+@media(max-width:767px){
+    .container, .padding50px {
+        padding: 10px;
+    }
+
+}
