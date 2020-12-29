@@ -12,6 +12,7 @@ html {
 .container {
     padding: 50px;
     width: 100%;
+    /* display: flex; */
 }
 
 .container__theme {
@@ -95,7 +96,9 @@ td {
 
 .edit {
     color:rgb(10, 213, 240);
+    background-color: rgba(4, 122, 4, 0);
     font-weight: 600;
+    border: none;
 }
 
 .edit:active, .edit:hover {
@@ -106,6 +109,8 @@ td {
 
 .delete {
     color: rgb(247, 119, 119);
+    border: none;
+    background-color: rgba(4, 122, 4, 0);
 }
 
 .delete:hover, .delete:active {
@@ -123,15 +128,16 @@ td {
 
 /* trang thêm,xóa hv */
 
-/* .padding50px {
-    /* padding: 50px; */
-/* } */ 
+ .padding50px {
+    /* display:inline-flex flex; */
+    justify-content: center;
+}
 
 .name, .birthday, .email, .phone {
     width: 100%;
-    margin: 10px 0;
-    position: relative;
+    margin: 10px auto; 
     display: flex;
+    position: relative;
     justify-content: center;
 }
 
@@ -141,7 +147,8 @@ td {
 
 .name-input, .email-input,
 .birthday-input, .phone-input {
-    width: calc(100% - 50px);
+    min-width: 300px;
+    /* max-width: 900px; */
     height: 30px;
     border-radius: 3px;
     border: 1px solid #cccccc;
@@ -160,8 +167,9 @@ td {
     font-size: 6px;
     position: absolute;
     padding-left: 3px;
-    top: 40%;
-    transform: translateY(-40%);
+    top: 5px;
+    /* top: 50%;
+    transform: translateY(-50%); */
 }
 
 .backsave {
