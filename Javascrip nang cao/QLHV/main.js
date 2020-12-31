@@ -1,6 +1,6 @@
 $.ajax({
   method: "GET",
-  url: "http://vietnguyen.herokuapp.com/users",
+  url: "https://vietnguyen.herokuapp.com/users",
 })
 .done(function (data) {
     let content = `<caption class='add_hv'>
@@ -45,7 +45,7 @@ $.ajax({
     function del(id){
         $.ajax({
             method: "DELETE",
-            url: `http://vietnguyen.herokuapp.com/users/${id}`,
+            url: `https://vietnguyen.herokuapp.com/users/${id}`,
         })
             .done(function(){
                 $('this').remove();
