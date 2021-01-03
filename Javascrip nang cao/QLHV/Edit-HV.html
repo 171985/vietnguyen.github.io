@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <title>Thêm_xóa_HV</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="container padding50px">
+      <div class="container__theme">
+        <h1>Sửa học viên</h1>
+      </div>
+      <div class="name">
+        <label class="name-label labels" for="">
+          Họ tên <i class="fa fa-asterisk red" aria-hidden="true"></i>
+        </label>
+        <input class="name-input" type="text" name="name" id="name" />
+      </div>
+      <div class="birthday">
+        <label class="birthday-label labels" for="">Năm sinh </label>
+        <input
+          class="birthday-input"
+          type="text"
+          name="birthday"
+          id="birthday"
+        />
+      </div>
+      <div class="email">
+        <label class="email-label labels" for="">
+          Email <i class="fa fa-asterisk red" aria-hidden="true"></i>
+        </label>
+        <input class="email-input" type="text" name="" id="email" />
+      </div>
+      <div class="phone">
+        <label class="phone-label labels" for="">
+          Phone <i class="fa fa-asterisk red" aria-hidden="true"></i>
+        </label>
+        <input class="phone-input" type="text" name="" id="" />
+      </div>
+      <div class="backsave">
+        <button class="back" type="button">
+          <a class="backsave-link" href="index.html">
+            <i class="fa fa-angle-left" aria-hidden="true"></i>
+            Quay lại
+          </a>
+        </button>
+
+        <button class="edit-button" type="button">
+          <i class="fa fa-floppy-o" aria-hidden="true"></i>
+          Edit
+        </button>
+      </div>
+    </div>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script>
+      //chinh sua users
+      let storageID = location.search;
+      let studentID = storageID.substring(4, storageID.length);
+      $.ajax({
+        method: "GET",
+        url: `https://vietnguyen.herokuapp.com/users/${studentID}`,
+      }).done(function (user) {
+        $(".name-input").val(user.name);
+        $(".birthday-input").val(user.birthday);
+        $(".email-input").val(user.email);
+        $(".phone-input").val(user.phone);
+        // $('.save').css("display","none");
+        // $('.edit-button').css("display","block")
+      });
+
+      $(".edit-button").click(function () {
+            $.ajax({
+            method: "PUT",
+            url: `https://vietnguyen.herokuapp.com/users/${studentID}`,
+            data: {
+              name: $(".name-input").val(),
+              email: $(".email-input").val(),
+              phone: $(".phone-input").val(),
+              birthday: $(".birthday-input").val(),
+            },
+          }).done(() => {
+            location.href = "index.html";
+          })
+             
+      });
+
+      function isValidData() {
+        let isValid = true;
+
+        const openDiv =
+          '<div id="name-error" class="error text-danger font-weight-light font-italic mt-1">';
+        const closeDiv = "</div>";
+
+        $(".error").remove();
+
+        const nameElement = $("#name");
+        if (nameElement.val() === "") {
+          isValid = false;
+          nameElement.after(openDiv + "Họ tên không được để trống" + closeDiv);
+        }
+
+        const birthYearElement = $("#birthYear");
+        const birthYear = birthYearElement.val();
+        const birthYearRegex = /^\d{4}$/;
+
+        if (birthYear !== "" && birthYearRegex.test(birthYear) === false) {
+          isValid = false;
+          birthYearElement.after(
+            openDiv + "Năm sinh không đúng định dạng" + closeDiv
+          );
+        }
+
+        const emailElement = $("#email");
+        const emailRegex = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+        if (emailRegex.test(emailElement.val()) === false) {
+          isValid = false;
+          emailElement.after(openDiv + "Email không đúng định dạng" + closeDiv);
+        }
+
+        const phoneElement = $("#phone");
+        if (phoneElement.val() === "") {
+          isValid = false;
+          phoneElement.after(
+            openDiv + "Số điện thoại không được để trống" + closeDiv
+          );
+        }
+
+        return isValid;
+      }
+    </script>
+
+    >
+  </body>
+</html>

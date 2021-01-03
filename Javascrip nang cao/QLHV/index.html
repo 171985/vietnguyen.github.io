@@ -1,25 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="main.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="main.css" />
     <title>Quan_Lys_HV</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="container__theme">
-            <h1>Danh sách học viên</h1>
+      <div class="container__theme">
+        <h1>Danh sách học viên</h1>
+      </div>
+      <table id="table"></table>
+      <div class="modal">
+        <div class="modal__overlay"></div>
+        <div class="modal__body">
+          <div class="delete-modal">
+            <div class="delete-form-text">
+              <p>Are you sure you want to delete?</p>
+            </div>
+            <div class="delete-group-btn">
+              <button class="confirm-btn" onclick="realDelete()">Yes</button>
+              <button class="cancel-btn" onclick="cancelDelete()">
+                Cancel
+              </button>
+            </div>
+          </div>
         </div>
-        <table id="table"></table>
+      </div>
     </div>
     <!-- <p id="demo"></p> -->
 
     <!-- jquery -->
-    <!-- <script src="https://code.jquery.com/jquery.js"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
-    
+    <script src="https://code.jquery.com/jquery.js"></script>
+
     <script src="main.js"></script>
-</body>
+  </body>
 </html>
