@@ -1,0 +1,42 @@
+/* Top Navigation */
+	.top-nav {
+		/* display: inline-block; */
+		background: #f1f1f1;
+		/* width: 100%; */
+		max-width: 1100px;
+		border-bottom: 1px #e1e1e1 solid;
+	}
+
+	/* Quick link */
+		.top-nav-quicklink {
+			float: left;
+			margin-bottom: 0;
+		}
+
+		.top-nav-quicklink li {
+			/* display: inline-block; */
+			list-style-type: none;
+			font-size: 1em;
+			color: gray;
+			align-items: center;
+		}
+
+		.top-nav-quicklink li:hover {
+			background-color: gray;
+		}
+		.top-nav-quicklink li a {
+			/* display: block; */
+			color: gray;
+			padding: 8px 16px;
+			transition-duration: .15s;
+		}
+		.top-nav-quicklink li a:hover {
+			/* padding-top: 4px; 
+			border-bottom: 4px solid #000; */
+			color: #000;
+		}
+		.top-nav-quicklink li a:hover i {
+			color: Dodgerblue;
+		}
+	/* ======= End quick link ======= */
+/* ======= End Top navigation ======= */
